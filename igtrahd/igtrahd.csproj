@@ -1,0 +1,2242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32933F47-176C-4089-BEB2-B5FA725BA2B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>igtrahd</RootNamespace>
+    <AssemblyName>igtrahd</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminPanel\addnews.aspx" />
+    <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="AdminPanel\bootstrap\css\bootstrap.css" />
+    <Content Include="AdminPanel\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AdminPanel\bootstrap\js\bootstrap.js" />
+    <Content Include="AdminPanel\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminPanel\Calendar_scheduleHS.png" />
+    <Content Include="AdminPanel\css\buttons.css" />
+    <Content Include="AdminPanel\css\calendar.css" />
+    <Content Include="AdminPanel\css\custom.css" />
+    <Content Include="AdminPanel\css\forms.css" />
+    <Content Include="AdminPanel\css\stats.css" />
+    <Content Include="AdminPanel\css\styles.css" />
+    <Content Include="AdminPanel\Dashboard.aspx" />
+    <Content Include="AdminPanel\images\facebook.png" />
+    <Content Include="AdminPanel\js\calendar.js" />
+    <Content Include="AdminPanel\js\custom.js" />
+    <Content Include="AdminPanel\js\editors.js" />
+    <Content Include="AdminPanel\js\forms.js" />
+    <Content Include="AdminPanel\js\stats.js" />
+    <Content Include="AdminPanel\js\tables.js" />
+    <Content Include="AdminPanel\ListAlumini.aspx" />
+    <Content Include="AdminPanel\ListGallery.aspx" />
+    <Content Include="AdminPanel\ListNewsEvents.aspx" />
+    <Content Include="AdminPanel\ListProductionInq.aspx" />
+    <Content Include="AdminPanel\ListTrainingInq.aspx" />
+    <Content Include="AdminPanel\ListVendor.aspx" />
+    <Content Include="AdminPanel\managegallery.aspx" />
+    <Content Include="AdminPanel\ManageNewsEvents.aspx" />
+    <Content Include="AdminPanel\ResetPassword.aspx" />
+    <Content Include="AdminPanel\scripts\jquery-1.11.3.min.js" />
+    <Content Include="AdminPanel\scripts\jquery-ui.js" />
+    <Content Include="AdminPanel\scripts\jquery-ui.min.js" />
+    <Content Include="AdminPanel\scripts\jquery.js" />
+    <Content Include="AdminPanel\styles\jquery-ui.css" />
+    <Content Include="AdminPanel\styles\jquery-ui.min.css" />
+    <Content Include="AdminPanel\UpdateGallery.aspx" />
+    <Content Include="alumni.aspx" />
+    <Content Include="assets\corporate\css\custom.css" />
+    <Content Include="assets\corporate\css\style-responsive.css" />
+    <Content Include="assets\corporate\css\style.css" />
+    <Content Include="assets\corporate\css\themes\blue.css" />
+    <Content Include="assets\corporate\css\themes\gray.css" />
+    <Content Include="assets\corporate\css\themes\green.css" />
+    <Content Include="assets\corporate\css\themes\orange.css" />
+    <Content Include="assets\corporate\css\themes\red.css" />
+    <Content Include="assets\corporate\css\themes\turquoise.css" />
+    <Content Include="assets\corporate\img\blockquote-corner-another-color.png" />
+    <Content Include="assets\corporate\img\blockquote-corner.png" />
+    <Content Include="assets\corporate\img\fa-angle-brands.png" />
+    <Content Include="assets\corporate\img\fa-angle-down-langs.png" />
+    <Content Include="assets\corporate\img\fa-angles.png" />
+    <Content Include="assets\corporate\img\icon-color-close.png" />
+    <Content Include="assets\corporate\img\icon-color.png" />
+    <Content Include="assets\corporate\img\icons\add-goods.png" />
+    <Content Include="assets\corporate\img\icons\del-goods.png" />
+    <Content Include="assets\corporate\img\icons\search-icon.png" />
+    <Content Include="assets\corporate\img\icons\shop-cart-icon.png" />
+    <Content Include="assets\corporate\img\icons\sidebar-toggle-icons.png" />
+    <Content Include="assets\corporate\img\icons\toggler.png" />
+    <Content Include="assets\corporate\img\icons\top-search-icon.png" />
+    <Content Include="assets\corporate\img\layerslider-arrows.png" />
+    <Content Include="assets\corporate\img\logos\0logo-blue-small.png" />
+    <Content Include="assets\corporate\img\logos\0logo-blue.png" />
+    <Content Include="assets\corporate\img\logos\0logo-green.png" />
+    <Content Include="assets\corporate\img\logos\0logo-orange.png" />
+    <Content Include="assets\corporate\img\logos\logo-corp-blue.png" />
+    <Content Include="assets\corporate\img\logos\logo-corp-gray.png" />
+    <Content Include="assets\corporate\img\logos\logo-corp-green.png" />
+    <Content Include="assets\corporate\img\logos\logo-corp-orange.png" />
+    <Content Include="assets\corporate\img\logos\logo-corp-red.png" />
+    <Content Include="assets\corporate\img\logos\logo-corp-turquoise.png" />
+    <Content Include="assets\corporate\img\logos\logo-red.png" />
+    <Content Include="assets\corporate\img\logos\logo-shop-blue.png" />
+    <Content Include="assets\corporate\img\logos\logo-shop-gray.png" />
+    <Content Include="assets\corporate\img\logos\logo-shop-green.png" />
+    <Content Include="assets\corporate\img\logos\logo-shop-orange.png" />
+    <Content Include="assets\corporate\img\logos\logo-shop-red.png" />
+    <Content Include="assets\corporate\img\logos\logo-shop-turquoise.png" />
+    <Content Include="assets\corporate\img\logos\shop-logo-red.png" />
+    <Content Include="assets\corporate\img\new.png" />
+    <Content Include="assets\corporate\img\payments\american-express.jpg" />
+    <Content Include="assets\corporate\img\payments\fa-angle-right-info.png" />
+    <Content Include="assets\corporate\img\payments\MasterCard.jpg" />
+    <Content Include="assets\corporate\img\payments\PayPal.jpg" />
+    <Content Include="assets\corporate\img\payments\visa.jpg" />
+    <Content Include="assets\corporate\img\payments\western-union.jpg" />
+    <Content Include="assets\corporate\img\sale.png" />
+    <Content Include="assets\corporate\img\step3-angle-right.png" />
+    <Content Include="assets\corporate\img\syncfusion-icons-white.png" />
+    <Content Include="assets\corporate\img\syncfusion-icons.png" />
+    <Content Include="assets\corporate\img\up.png" />
+    <Content Include="assets\corporate\scripts\back-to-top.js" />
+    <Content Include="assets\corporate\scripts\layout.js" />
+    <Content Include="assets\pages\css\animate.css" />
+    <Content Include="assets\pages\css\components.css" />
+    <Content Include="assets\pages\css\gallery.css" />
+    <Content Include="assets\pages\css\portfolio.css" />
+    <Content Include="assets\pages\css\slider.css" />
+    <Content Include="assets\pages\css\style-shop.css" />
+    <Content Include="assets\pages\img\brands\canon.jpg" />
+    <Content Include="assets\pages\img\brands\esprit.jpg" />
+    <Content Include="assets\pages\img\brands\gap.jpg" />
+    <Content Include="assets\pages\img\brands\next.jpg" />
+    <Content Include="assets\pages\img\brands\puma.jpg" />
+    <Content Include="assets\pages\img\brands\zara.jpg" />
+    <Content Include="assets\pages\img\careers\careers.jpg" />
+    <Content Include="assets\pages\img\cart-img.jpg" />
+    <Content Include="assets\pages\img\clients\client_1.png" />
+    <Content Include="assets\pages\img\clients\client_1_gray.png" />
+    <Content Include="assets\pages\img\clients\client_2.png" />
+    <Content Include="assets\pages\img\clients\client_2_gray.png" />
+    <Content Include="assets\pages\img\clients\client_3.png" />
+    <Content Include="assets\pages\img\clients\client_3_gray.png" />
+    <Content Include="assets\pages\img\clients\client_4.png" />
+    <Content Include="assets\pages\img\clients\client_4_gray.png" />
+    <Content Include="assets\pages\img\clients\client_5.png" />
+    <Content Include="assets\pages\img\clients\client_5_gray.png" />
+    <Content Include="assets\pages\img\clients\client_6.png" />
+    <Content Include="assets\pages\img\clients\client_6_gray.png" />
+    <Content Include="assets\pages\img\clients\client_7.png" />
+    <Content Include="assets\pages\img\clients\client_7_gray.png" />
+    <Content Include="assets\pages\img\clients\client_8.png" />
+    <Content Include="assets\pages\img\clients\client_8_gray.png" />
+    <Content Include="assets\pages\img\fa-angle-brands.png" />
+    <Content Include="assets\pages\img\fa-angles.png" />
+    <Content Include="assets\pages\img\frontend-slider\bg1.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg1_BK.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg2.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg2_BK.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg3.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg4.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg5.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg8.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg9.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\bg9_BK.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\hint1-blue.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint1-green.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint1-orange.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint1-red.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint2-blue.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint2-green.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint2-orange.png" />
+    <Content Include="assets\pages\img\frontend-slider\hint2-red.png" />
+    <Content Include="assets\pages\img\frontend-slider\ipad.png" />
+    <Content Include="assets\pages\img\frontend-slider\ipadmini.png" />
+    <Content Include="assets\pages\img\frontend-slider\iphone.png" />
+    <Content Include="assets\pages\img\frontend-slider\iphone_large.png" />
+    <Content Include="assets\pages\img\frontend-slider\iphone_left.png" />
+    <Content Include="assets\pages\img\frontend-slider\iphone_right.png" />
+    <Content Include="assets\pages\img\frontend-slider\mac.png" />
+    <Content Include="assets\pages\img\frontend-slider\macbook.png" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb1.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb2.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb3.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb4.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb5.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb6.jpg" />
+    <Content Include="assets\pages\img\frontend-slider\thumbs\thumb7.jpg" />
+    <Content Include="assets\pages\img\icon-color-close.png" />
+    <Content Include="assets\pages\img\icon-color.png" />
+    <Content Include="assets\pages\img\icons\add-goods.png" />
+    <Content Include="assets\pages\img\icons\del-goods.png" />
+    <Content Include="assets\pages\img\icons\search-icon.png" />
+    <Content Include="assets\pages\img\icons\shop-cart-icon.png" />
+    <Content Include="assets\pages\img\icons\sidebar-toggle-icons.png" />
+    <Content Include="assets\pages\img\icons\toggler.png" />
+    <Content Include="assets\pages\img\icons\top-search-icon.png" />
+    <Content Include="assets\pages\img\img1.jpg" />
+    <Content Include="assets\pages\img\img3.jpg" />
+    <Content Include="assets\pages\img\index-sliders\slide1.jpg" />
+    <Content Include="assets\pages\img\index-sliders\slide2.jpg" />
+    <Content Include="assets\pages\img\index-sliders\slide3.jpg" />
+    <Content Include="assets\pages\img\new.png" />
+    <Content Include="assets\pages\img\people\img1-large.jpg" />
+    <Content Include="assets\pages\img\people\img1-small.jpg" />
+    <Content Include="assets\pages\img\people\img2-large.jpg" />
+    <Content Include="assets\pages\img\people\img2-small.jpg" />
+    <Content Include="assets\pages\img\people\img3-large.jpg" />
+    <Content Include="assets\pages\img\people\img3-small.jpg" />
+    <Content Include="assets\pages\img\people\img4-large.jpg" />
+    <Content Include="assets\pages\img\people\img4-small.jpg" />
+    <Content Include="assets\pages\img\people\img5-large.jpg" />
+    <Content Include="assets\pages\img\people\img5-small.jpg" />
+    <Content Include="assets\pages\img\people\img6-large.jpg" />
+    <Content Include="assets\pages\img\people\img6-small.jpg" />
+    <Content Include="assets\pages\img\people\img7-large.jpg" />
+    <Content Include="assets\pages\img\people\img7-small.jpg" />
+    <Content Include="assets\pages\img\people\img8-large.jpg" />
+    <Content Include="assets\pages\img\people\img8-small.jpg" />
+    <Content Include="assets\pages\img\photos\img1.jpg" />
+    <Content Include="assets\pages\img\photos\img2.jpg" />
+    <Content Include="assets\pages\img\photos\img3.jpg" />
+    <Content Include="assets\pages\img\photos\img4.jpg" />
+    <Content Include="assets\pages\img\photos\img5.jpg" />
+    <Content Include="assets\pages\img\photos\img6.jpg" />
+    <Content Include="assets\pages\img\pics\img1-large.jpg" />
+    <Content Include="assets\pages\img\pics\img1-medium.jpg" />
+    <Content Include="assets\pages\img\pics\img2-large.jpg" />
+    <Content Include="assets\pages\img\pics\img2-large_bk.jpg" />
+    <Content Include="assets\pages\img\pics\img2-medium.jpg" />
+    <Content Include="assets\pages\img\pics\img2-medium_bk.jpg" />
+    <Content Include="assets\pages\img\posts\img1.jpg" />
+    <Content Include="assets\pages\img\posts\img2.jpg" />
+    <Content Include="assets\pages\img\posts\img3.jpg" />
+    <Content Include="assets\pages\img\product1.jpg" />
+    <Content Include="assets\pages\img\product1big.jpg" />
+    <Content Include="assets\pages\img\products\k1.jpg" />
+    <Content Include="assets\pages\img\products\k2.jpg" />
+    <Content Include="assets\pages\img\products\k3.jpg" />
+    <Content Include="assets\pages\img\products\k4.jpg" />
+    <Content Include="assets\pages\img\products\model1.jpg" />
+    <Content Include="assets\pages\img\products\model2.jpg" />
+    <Content Include="assets\pages\img\products\model3.jpg" />
+    <Content Include="assets\pages\img\products\model4.jpg" />
+    <Content Include="assets\pages\img\products\model5.jpg" />
+    <Content Include="assets\pages\img\products\model6.jpg" />
+    <Content Include="assets\pages\img\products\model7.jpg" />
+    <Content Include="assets\pages\img\products\p1.jpg" />
+    <Content Include="assets\pages\img\products\p2.jpg" />
+    <Content Include="assets\pages\img\products\p3.jpg" />
+    <Content Include="assets\pages\img\products\p4.jpg" />
+    <Content Include="assets\pages\img\products\p5.jpg" />
+    <Content Include="assets\pages\img\products\p6.jpg" />
+    <Content Include="assets\pages\img\products\p7.jpg" />
+    <Content Include="assets\pages\img\sale.png" />
+    <Content Include="assets\pages\img\shop-slider\slide1\bg.jpg" />
+    <Content Include="assets\pages\img\shop-slider\slide2\bg.jpg" />
+    <Content Include="assets\pages\img\shop-slider\slide2\price.png" />
+    <Content Include="assets\pages\img\shop-slider\slide3\bg.jpg" />
+    <Content Include="assets\pages\img\shop-slider\slide4\bg.jpg" />
+    <Content Include="assets\pages\img\shop-slider\slide4\buy.png" />
+    <Content Include="assets\pages\img\shop-slider\slide4\price.png" />
+    <Content Include="assets\pages\img\shop-slider\slide4\title.png" />
+    <Content Include="assets\pages\img\social\aboutme.png" />
+    <Content Include="assets\pages\img\social\amazon.png" />
+    <Content Include="assets\pages\img\social\behance.png" />
+    <Content Include="assets\pages\img\social\blogger.png" />
+    <Content Include="assets\pages\img\social\deviantart.png" />
+    <Content Include="assets\pages\img\social\dribbble.png" />
+    <Content Include="assets\pages\img\social\dropbox.png" />
+    <Content Include="assets\pages\img\social\evernote.png" />
+    <Content Include="assets\pages\img\social\facebook.png" />
+    <Content Include="assets\pages\img\social\flickr.png" />
+    <Content Include="assets\pages\img\social\forrst.png" />
+    <Content Include="assets\pages\img\social\foursquare.png" />
+    <Content Include="assets\pages\img\social\github.png" />
+    <Content Include="assets\pages\img\social\googleplus.png" />
+    <Content Include="assets\pages\img\social\gravatar.png" />
+    <Content Include="assets\pages\img\social\instagram.png" />
+    <Content Include="assets\pages\img\social\jolicloud.png" />
+    <Content Include="assets\pages\img\social\klout.png" />
+    <Content Include="assets\pages\img\social\last-fm.png" />
+    <Content Include="assets\pages\img\social\linkedin.png" />
+    <Content Include="assets\pages\img\social\myspace.png" />
+    <Content Include="assets\pages\img\social\picasa.png" />
+    <Content Include="assets\pages\img\social\pintrest.png" />
+    <Content Include="assets\pages\img\social\quora.png" />
+    <Content Include="assets\pages\img\social\reddit.png" />
+    <Content Include="assets\pages\img\social\rss.png" />
+    <Content Include="assets\pages\img\social\skype.png" />
+    <Content Include="assets\pages\img\social\spotify.png" />
+    <Content Include="assets\pages\img\social\stumbleupon.png" />
+    <Content Include="assets\pages\img\social\tumblr.png" />
+    <Content Include="assets\pages\img\social\twitter.png" />
+    <Content Include="assets\pages\img\social\vimeo.png" />
+    <Content Include="assets\pages\img\social\vk.png" />
+    <Content Include="assets\pages\img\social\wordpress.png" />
+    <Content Include="assets\pages\img\social\xing.png" />
+    <Content Include="assets\pages\img\social\yahoo.png" />
+    <Content Include="assets\pages\img\social\youtube.png" />
+    <Content Include="assets\pages\img\step3-angle-right.png" />
+    <Content Include="assets\pages\img\title-bg\1.jpg" />
+    <Content Include="assets\pages\img\title-bg\man.jpg" />
+    <Content Include="assets\pages\img\title-bg\woman.jpg" />
+    <Content Include="assets\pages\img\works\img1.jpg" />
+    <Content Include="assets\pages\img\works\img2.jpg" />
+    <Content Include="assets\pages\img\works\img3.jpg" />
+    <Content Include="assets\pages\img\works\img4.jpg" />
+    <Content Include="assets\pages\img\works\img5.jpg" />
+    <Content Include="assets\pages\img\works\img6.jpg" />
+    <Content Include="assets\pages\scripts\bs-carousel.js" />
+    <Content Include="assets\pages\scripts\checkout.js" />
+    <Content Include="assets\pages\scripts\contact-us.js" />
+    <Content Include="assets\pages\scripts\portfolio.js" />
+    <Content Include="assets\plugins\bootstrap-touchspin\bootstrap.touchspin.css" />
+    <Content Include="assets\plugins\bootstrap-touchspin\bootstrap.touchspin.js" />
+    <Content Include="assets\plugins\bootstrap-touchspin\bootstrap.touchspin.min.css" />
+    <Content Include="assets\plugins\bootstrap-touchspin\bootstrap.touchspin.min.js" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\npm.js" />
+    <Content Include="assets\plugins\excanvas.min.js" />
+    <Content Include="assets\plugins\fancybox\CHANGELOG.txt" />
+    <Content Include="assets\plugins\fancybox\demo\1_b.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\1_s.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\2_b.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\2_s.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\3_b.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\3_s.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\4_b.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\4_s.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\5_b.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\5_s.jpg" />
+    <Content Include="assets\plugins\fancybox\demo\ajax.txt" />
+    <Content Include="assets\plugins\fancybox\demo\iframe.html" />
+    <Content Include="assets\plugins\fancybox\demo\index.html" />
+    <Content Include="assets\plugins\fancybox\lib\jquery-1.8.2.min.js" />
+    <Content Include="assets\plugins\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="assets\plugins\fancybox\README.txt" />
+    <Content Include="assets\plugins\fancybox\source\blank.gif" />
+    <Content Include="assets\plugins\fancybox\source\fancybox_loading.gif" />
+    <Content Include="assets\plugins\fancybox\source\fancybox_overlay.png" />
+    <Content Include="assets\plugins\fancybox\source\fancybox_sprite.png" />
+    <Content Include="assets\plugins\fancybox\source\helpers\fancybox_buttons.png" />
+    <Content Include="assets\plugins\fancybox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="assets\plugins\fancybox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="assets\plugins\fancybox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="assets\plugins\fancybox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="assets\plugins\fancybox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="assets\plugins\fancybox\source\jquery.fancybox.css" />
+    <Content Include="assets\plugins\fancybox\source\jquery.fancybox.js" />
+    <Content Include="assets\plugins\fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="assets\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\plugins\gmaps\gmaps.js" />
+    <Content Include="assets\plugins\gmaps\gmaps.min.js" />
+    <Content Include="assets\plugins\holder.js" />
+    <Content Include="assets\plugins\jquery-migrate.min.js" />
+    <Content Include="assets\plugins\jquery-mixitup\jquery.mixitup.min.js" />
+    <Content Include="assets\plugins\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="assets\plugins\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="assets\plugins\jquery.blockui.min.js" />
+    <Content Include="assets\plugins\jquery.cokie.min.js" />
+    <Content Include="assets\plugins\jquery.easing.js" />
+    <Content Include="assets\plugins\jquery.min.js" />
+    <Content Include="assets\plugins\jquery.parallax.js" />
+    <Content Include="assets\plugins\jquery.scrollTo.min.js" />
+    <Content Include="assets\plugins\moment.min.js" />
+    <Content Include="assets\plugins\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="assets\plugins\owl.carousel\owl.carousel.js" />
+    <Content Include="assets\plugins\owl.carousel\owl.carousel.min.js" />
+    <Content Include="assets\plugins\rateit\example\content\antenna-black.png" />
+    <Content Include="assets\plugins\rateit\example\content\antenna-red.png" />
+    <Content Include="assets\plugins\rateit\example\content\antenna-yellow.png" />
+    <Content Include="assets\plugins\rateit\example\content\antenna.css" />
+    <Content Include="assets\plugins\rateit\example\content\bigstars.css" />
+    <Content Include="assets\plugins\rateit\example\content\star-black32.png" />
+    <Content Include="assets\plugins\rateit\example\content\star-gold32.png" />
+    <Content Include="assets\plugins\rateit\example\content\star-red32.png" />
+    <Content Include="assets\plugins\rateit\example\content\star-white32.png" />
+    <Content Include="assets\plugins\rateit\example\content\star_2.gif" />
+    <Content Include="assets\plugins\rateit\example\content\star_3.gif" />
+    <Content Include="assets\plugins\rateit\example\content\star_4.gif" />
+    <Content Include="assets\plugins\rateit\example\example.htm" />
+    <Content Include="assets\plugins\rateit\example\rateit.aspx" />
+    <Content Include="assets\plugins\rateit\example\sh\shBrushCSharp.js" />
+    <Content Include="assets\plugins\rateit\example\sh\shBrushCss.js" />
+    <Content Include="assets\plugins\rateit\example\sh\shBrushJScript.js" />
+    <Content Include="assets\plugins\rateit\example\sh\shBrushXml.js" />
+    <Content Include="assets\plugins\rateit\example\sh\shCore.css" />
+    <Content Include="assets\plugins\rateit\example\sh\shCore.js" />
+    <Content Include="assets\plugins\rateit\example\sh\shCoreDefault.css" />
+    <Content Include="assets\plugins\rateit\src\delete.gif" />
+    <Content Include="assets\plugins\rateit\src\jquery.rateit.js" />
+    <Content Include="assets\plugins\rateit\src\jquery.rateit.min.js" />
+    <Content Include="assets\plugins\rateit\src\rateit.css" />
+    <Content Include="assets\plugins\rateit\src\star.gif" />
+    <Content Include="assets\plugins\respond.min.js" />
+    <Content Include="assets\plugins\simple-line-icons\icons-lte-ie7.js" />
+    <Content Include="assets\plugins\simple-line-icons\License.txt" />
+    <Content Include="assets\plugins\simple-line-icons\Readme.txt" />
+    <Content Include="assets\plugins\simple-line-icons\simple-line-icons.css" />
+    <Content Include="assets\plugins\simple-line-icons\simple-line-icons.min.css" />
+    <Content Include="assets\plugins\smooth-scroll\smooth-scroll.js" />
+    <Content Include="assets\plugins\uniform\css\uniform.default.css" />
+    <Content Include="assets\plugins\uniform\css\uniform.default.min.css" />
+    <Content Include="assets\plugins\uniform\images\bg-input-focus.png" />
+    <Content Include="assets\plugins\uniform\images\bg-input.png" />
+    <Content Include="assets\plugins\uniform\images\sprite.png" />
+    <Content Include="assets\plugins\uniform\images\sprite_original.png" />
+    <Content Include="assets\plugins\uniform\jquery.uniform.js" />
+    <Content Include="assets\plugins\uniform\jquery.uniform.min.js" />
+    <Content Include="assets\plugins\zoom\jquery.zoom.js" />
+    <Content Include="assets\plugins\zoom\jquery.zoom.min.js" />
+    <Content Include="BhavnagarApplyNow.aspx" />
+    <Content Include="BhavnagarCourse.aspx" />
+    <Content Include="BhavnagarPhotoGallery.aspx" />
+    <Content Include="career.aspx" />
+    <Content Include="CNC-machinist-for-ITI.aspx" />
+    <Content Include="consultancy.aspx" />
+    <Content Include="contact-us.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="design-and-development.aspx" />
+    <Content Include="diploma-and-certificate-courses.aspx" />
+    <Content Include="download\ncvt.jpg" />
+    <Content Include="employee-hiring.aspx" />
+    <Content Include="extension-centre.aspx" />
+    <Content Include="free-summer-camp-for-students.aspx" />
+    <Content Include="gallery.aspx" />
+    <Content Include="Gallery\10\DSC_0038.JPG" />
+    <Content Include="Gallery\10\DSC_0043.JPG" />
+    <Content Include="Gallery\10\DSC_0047.JPG" />
+    <Content Include="Gallery\10\DSC_0053.JPG" />
+    <Content Include="Gallery\10\DSC_0056.JPG" />
+    <Content Include="Gallery\10\DSC_0058.JPG" />
+    <Content Include="Gallery\10\DSC_0063.JPG" />
+    <Content Include="Gallery\10\DSC_0067.JPG" />
+    <Content Include="Gallery\10\DSC_0077.JPG" />
+    <Content Include="Gallery\11\DSC_0079.JPG" />
+    <Content Include="Gallery\11\DSC_0081.JPG" />
+    <Content Include="Gallery\11\DSC_0083.JPG" />
+    <Content Include="Gallery\11\DSC_0088.JPG" />
+    <Content Include="Gallery\11\DSC_0092.JPG" />
+    <Content Include="Gallery\11\DSC_0096.JPG" />
+    <Content Include="Gallery\11\DSC_0098.JPG" />
+    <Content Include="Gallery\12\DSC_0021.JPG" />
+    <Content Include="Gallery\12\DSC_0023.JPG" />
+    <Content Include="Gallery\12\DSC_0036.JPG" />
+    <Content Include="Gallery\12\DSC_0037.JPG" />
+    <Content Include="Gallery\12\DSC_0041.JPG" />
+    <Content Include="Gallery\12\DSC_0047.JPG" />
+    <Content Include="Gallery\12\DSC_0049.JPG" />
+    <Content Include="Gallery\12\DSC_0056.JPG" />
+    <Content Include="Gallery\12\DSC_0058.JPG" />
+    <Content Include="Gallery\12\DSC_0067.JPG" />
+    <Content Include="Gallery\12\DSC_0070.JPG" />
+    <Content Include="Gallery\12\DSC_0100.JPG" />
+    <Content Include="Gallery\13\DSC_0086.JPG" />
+    <Content Include="Gallery\13\DSC_0089.JPG" />
+    <Content Include="Gallery\13\DSC_0094.JPG" />
+    <Content Include="Gallery\14\IMG_20181208_103839.jpg" />
+    <Content Include="Gallery\14\IMG_20181208_104101.jpg" />
+    <Content Include="Gallery\14\IMG_20181208_104557.jpg" />
+    <Content Include="Gallery\14\IMG_20181208_105209.jpg" />
+    <Content Include="Gallery\14\IMG_20181208_110415.jpg" />
+    <Content Include="Gallery\14\IMG_20181208_114632.jpg" />
+    <Content Include="Gallery\15\DSC_0041.JPG" />
+    <Content Include="Gallery\15\DSC_0177.JPG" />
+    <Content Include="Gallery\15\Mould 1.jpg" />
+    <Content Include="Gallery\15\Mould 2.jpg" />
+    <Content Include="Gallery\16\DSC_0104.JPG" />
+    <Content Include="Gallery\16\DSC_0110.JPG" />
+    <Content Include="Gallery\16\IMG_20181208_104557.jpg" />
+    <Content Include="Gallery\16\IMG_20181208_105949.jpg" />
+    <Content Include="Gallery\16\IMG_20181208_114632.jpg" />
+    <Content Include="Gallery\16\IMG_20181208_114803.jpg" />
+    <Content Include="Gallery\17\DSC_0125.JPG" />
+    <Content Include="Gallery\17\DSC_0127.JPG" />
+    <Content Include="Gallery\17\DSC_0130.JPG" />
+    <Content Include="Gallery\17\DSC_0132.JPG" />
+    <Content Include="Gallery\17\DSC_0134.JPG" />
+    <Content Include="Gallery\17\DSC_0135.JPG" />
+    <Content Include="Gallery\17\DSC_0138.JPG" />
+    <Content Include="Gallery\17\DSC_0140.JPG" />
+    <Content Include="Gallery\17\DSC_0141.JPG" />
+    <Content Include="Gallery\17\DSC_0142.JPG" />
+    <Content Include="Gallery\17\DSC_0143.JPG" />
+    <Content Include="Gallery\17\DSC_0144.JPG" />
+    <Content Include="Gallery\17\DSC_0146.JPG" />
+    <Content Include="Gallery\17\DSC_0148.JPG" />
+    <Content Include="Gallery\17\DSC_0152.JPG" />
+    <Content Include="Gallery\18\award1.jpg" />
+    <Content Include="Gallery\18\DSC_0003 - Copy %282%29.JPG" />
+    <Content Include="Gallery\18\DSC_0007.JPG" />
+    <Content Include="Gallery\19\HeatTreatment_Page_1.jpg" />
+    <Content Include="Gallery\19\HeatTreatment_Page_2.jpg" />
+    <Content Include="Gallery\1\Chrysanthemum.jpg" />
+    <Content Include="Gallery\1\Desert.jpg" />
+    <Content Include="Gallery\20\Hostel.JPG" />
+    <Content Include="Gallery\20\Parking Area.JPG" />
+    <Content Include="Gallery\20\Training Center.JPG" />
+    <Content Include="Gallery\21\DCDies 4.png" />
+    <Content Include="Gallery\21\Design11.png" />
+    <Content Include="Gallery\21\Drg10.jpg" />
+    <Content Include="Gallery\21\fill13.jpg" />
+    <Content Include="Gallery\21\fillpressure25.jpg" />
+    <Content Include="Gallery\21\Flow Analysis12.png" />
+    <Content Include="Gallery\21\Meshing18.jpg" />
+    <Content Include="Gallery\21\Moldex14.png" />
+    <Content Include="Gallery\21\Moldex16.jpg" />
+    <Content Include="Gallery\21\Packing20.jpg" />
+    <Content Include="Gallery\21\warp21.jpg" />
+    <Content Include="Gallery\21\Warpage19.jpg" />
+    <Content Include="Gallery\22\DSC_0090.JPG" />
+    <Content Include="Gallery\22\DSC_0093.JPG" />
+    <Content Include="Gallery\22\DSC_0096.JPG" />
+    <Content Include="Gallery\22\DSC_0098.JPG" />
+    <Content Include="Gallery\23\award1.jpg" />
+    <Content Include="Gallery\23\DSC_0003 - Copy %282%29.JPG" />
+    <Content Include="Gallery\23\DSC_0007.JPG" />
+    <Content Include="Gallery\24\DSC_0078.JPG" />
+    <Content Include="Gallery\25\DSC_0038.JPG" />
+    <Content Include="Gallery\25\DSC_0043.JPG" />
+    <Content Include="Gallery\25\DSC_0047.JPG" />
+    <Content Include="Gallery\25\DSC_0053.JPG" />
+    <Content Include="Gallery\25\DSC_0056.JPG" />
+    <Content Include="Gallery\25\DSC_0058.JPG" />
+    <Content Include="Gallery\25\DSC_0063.JPG" />
+    <Content Include="Gallery\25\DSC_0067.JPG" />
+    <Content Include="Gallery\25\DSC_0077.JPG" />
+    <Content Include="Gallery\26\DSC_0079.JPG" />
+    <Content Include="Gallery\26\DSC_0081.JPG" />
+    <Content Include="Gallery\26\DSC_0083.JPG" />
+    <Content Include="Gallery\26\DSC_0088.JPG" />
+    <Content Include="Gallery\26\DSC_0092.JPG" />
+    <Content Include="Gallery\26\DSC_0096.JPG" />
+    <Content Include="Gallery\26\DSC_0098.JPG" />
+    <Content Include="Gallery\27\DSC_0021.JPG" />
+    <Content Include="Gallery\27\DSC_0023.JPG" />
+    <Content Include="Gallery\27\DSC_0036.JPG" />
+    <Content Include="Gallery\27\DSC_0037.JPG" />
+    <Content Include="Gallery\27\DSC_0041.JPG" />
+    <Content Include="Gallery\27\DSC_0047.JPG" />
+    <Content Include="Gallery\27\DSC_0049.JPG" />
+    <Content Include="Gallery\27\DSC_0056.JPG" />
+    <Content Include="Gallery\27\DSC_0058.JPG" />
+    <Content Include="Gallery\27\DSC_0067.JPG" />
+    <Content Include="Gallery\27\DSC_0070.JPG" />
+    <Content Include="Gallery\27\DSC_0100.JPG" />
+    <Content Include="Gallery\28\3D printer.jpg" />
+    <Content Include="Gallery\28\conformal_cooling.jpg" />
+    <Content Include="Gallery\28\conformal_cooling4 - Copy.jpg" />
+    <Content Include="Gallery\28\DSC00955.JPG" />
+    <Content Include="Gallery\28\DSC01455.JPG" />
+    <Content Include="Gallery\28\DSC_0085.JPG" />
+    <Content Include="Gallery\28\DSC_0087.JPG" />
+    <Content Include="Gallery\29\DSC_0086.JPG" />
+    <Content Include="Gallery\29\DSC_0089.JPG" />
+    <Content Include="Gallery\29\DSC_0094.JPG" />
+    <Content Include="Gallery\2\Chrysanthemum.jpg" />
+    <Content Include="Gallery\2\Desert.jpg" />
+    <Content Include="Gallery\2\Hydrangeas.jpg" />
+    <Content Include="Gallery\30\IMG_20181208_103839.jpg" />
+    <Content Include="Gallery\30\IMG_20181208_104101.jpg" />
+    <Content Include="Gallery\30\IMG_20181208_104557.jpg" />
+    <Content Include="Gallery\30\IMG_20181208_105209.jpg" />
+    <Content Include="Gallery\30\IMG_20181208_110415.jpg" />
+    <Content Include="Gallery\30\IMG_20181208_114632.jpg" />
+    <Content Include="Gallery\31\DSC_0041.JPG" />
+    <Content Include="Gallery\32\DSC_0104.JPG" />
+    <Content Include="Gallery\32\IMG_20181208_104557.jpg" />
+    <Content Include="Gallery\32\IMG_20181208_105949.jpg" />
+    <Content Include="Gallery\32\IMG_20181208_114632.jpg" />
+    <Content Include="Gallery\32\IMG_20181208_114803.jpg" />
+    <Content Include="Gallery\35\One Day Workshop on 3D Printing.jpeg" />
+    <Content Include="Gallery\35\pre receipt.jpg Low.jpg" />
+    <Content Include="Gallery\36\01.jpg" />
+    <Content Include="Gallery\36\02.jpg" />
+    <Content Include="Gallery\37\03.jpg" />
+    <Content Include="Gallery\37\04.jpg" />
+    <Content Include="Gallery\38\03.jpg" />
+    <Content Include="Gallery\38\04.jpg" />
+    <Content Include="Gallery\39\01.jpg" />
+    <Content Include="Gallery\39\1.jpg" />
+    <Content Include="Gallery\39\3.jpg" />
+    <Content Include="Gallery\39\4.jpg" />
+    <Content Include="Gallery\3\Chrysanthemum.jpg" />
+    <Content Include="Gallery\3\Lighthouse.jpg" />
+    <Content Include="Gallery\3\Penguins.jpg" />
+    <Content Include="Gallery\40\01.jpg" />
+    <Content Include="Gallery\40\1.jpg" />
+    <Content Include="Gallery\40\20.06.2019.jpg" />
+    <Content Include="Gallery\40\3.jpg" />
+    <Content Include="Gallery\40\4.jpg" />
+    <Content Include="Gallery\41\20191005_113719.jpg" />
+    <Content Include="Gallery\41\SFURTI 1.jpg" />
+    <Content Include="Gallery\42\Screenshot_20191125_145437~2.jpg" />
+    <Content Include="Gallery\46\WhatsApp Image 2021-06-18 at 3.03.45 PM.jpeg" />
+    <Content Include="Gallery\46\WhatsApp Image 2021-06-18 at 3.50.46 PM.jpeg" />
+    <Content Include="Gallery\4\award1.jpg" />
+    <Content Include="giz.aspx" />
+    <Content Include="grievance.aspx" />
+    <Content Include="heat-treatment.aspx" />
+    <Content Include="history.aspx" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="igtr-sub-center.aspx" />
+    <Content Include="images\01-CADCAM.png" />
+    <Content Include="images\02-Job-Work%28Machining%29.png" />
+    <Content Include="images\03-Tool-Design.png" />
+    <Content Include="images\04-Inspection.png" />
+    <Content Include="images\acrobat.gif" />
+    <Content Include="images\ad.jpg" />
+    <Content Include="images\Admission-notice-jan-23.jpeg" />
+    <Content Include="images\BUILDING.jpeg" />
+    <Content Include="images\career.jpg" />
+    <Content Include="images\CCMO.jpg" />
+    <Content Include="images\Click-here.gif" />
+    <Content Include="images\clients\igtr-client_03.png" />
+    <Content Include="images\clients\igtr-client_04.png" />
+    <Content Include="images\clients\igtr-client_05.png" />
+    <Content Include="images\clients\igtr-client_06.png" />
+    <Content Include="images\clients\igtr-client_07.png" />
+    <Content Include="images\clients\igtr-client_10.png" />
+    <Content Include="images\clients\igtr-client_12.png" />
+    <Content Include="images\clients\igtr-client_13.png" />
+    <Content Include="images\clients\igtr-client_14.png" />
+    <Content Include="images\clients\igtr-client_15.png" />
+    <Content Include="images\clients\igtr-client_16.png" />
+    <Content Include="images\clients\igtr-client_17.png" />
+    <Content Include="images\clients\igtr-client_18.png" />
+    <Content Include="images\clients\igtr-client_19.png" />
+    <Content Include="images\clients\igtr-client_20.png" />
+    <Content Include="images\clients\igtr-client_21.png" />
+    <Content Include="images\clients\igtr-client_23.png" />
+    <Content Include="images\clients\igtr-client_24.png" />
+    <Content Include="images\clients\igtr-client_25.png" />
+    <Content Include="images\clients\igtr-client_27.png" />
+    <Content Include="images\clients\igtr-client_29.png" />
+    <Content Include="images\clients\igtr-client_32.png" />
+    <Content Include="images\clients\igtr-client_35.png" />
+    <Content Include="images\clients\igtr-client_36.png" />
+    <Content Include="images\clients\igtr-client_38.png" />
+    <Content Include="images\clients\igtr-client_39.png" />
+    <Content Include="images\clients\igtr-client_40.png" />
+    <Content Include="images\clients\igtr-client_41.png" />
+    <Content Include="images\clients\igtr-client_44.png" />
+    <Content Include="images\clients\igtr-client_47.png" />
+    <Content Include="images\clients\igtr-client_51.png" />
+    <Content Include="images\clients\igtr-client_52.png" />
+    <Content Include="images\clients\igtr-client_55.png" />
+    <Content Include="images\clients\igtr-client_59.jpg" />
+    <Content Include="images\clients_thumbnail - Copy.jpg" />
+    <Content Include="images\clients_thumbnail.jpg" />
+    <Content Include="images\CMM-LAB.jpeg" />
+    <Content Include="images\CNC-MACHINE-AND-CONSOLE-LAB.jpeg" />
+    <Content Include="images\CNC-Machinist-for-ITI-Turner-Fitter-&amp;-Machinist.jpg" />
+    <Content Include="images\consultancy_marketing_thumbnail - Copy.jpg" />
+    <Content Include="images\consultancy_marketing_thumbnail.jpg" />
+    <Content Include="images\delete-icon1.jpg" />
+    <Content Include="images\DTM-23.jpeg" />
+    <Content Include="images\DTM-Files.jpeg" />
+    <Content Include="images\Free-Summer-Camp-for-9th-10th-11th-&amp;-12th-Students.jpg" />
+    <Content Include="images\gallery\awards\award1.jpg" />
+    <Content Include="images\gallery\awards\award2.jpg" />
+    <Content Include="images\gallery\awards\award3.jpg" />
+    <Content Include="images\gallery\events\event01.jpg" />
+    <Content Include="images\gallery\events\event02.jpg" />
+    <Content Include="images\gallery\events\event03.jpg" />
+    <Content Include="images\gallery\events\event04.jpg" />
+    <Content Include="images\gallery\events\event05.jpg" />
+    <Content Include="images\gallery\events\event06.jpg" />
+    <Content Include="images\gallery\events\event07.jpg" />
+    <Content Include="images\gallery\events\event08.jpg" />
+    <Content Include="images\gallery\events\event09.jpg" />
+    <Content Include="images\gallery\events\event10.jpg" />
+    <Content Include="images\gallery\events\event11.jpg" />
+    <Content Include="images\gallery\infrastructure\HeatTreatment_Page_1.jpg" />
+    <Content Include="images\gallery\infrastructure\HeatTreatment_Page_2.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure1.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure2.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure3.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure4.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure5.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure6.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure7.jpg" />
+    <Content Include="images\gallery\infrastructure\infrastructure8.jpg" />
+    <Content Include="images\gallery\production\production01.jpg" />
+    <Content Include="images\gallery\production\production02.jpg" />
+    <Content Include="images\gallery\production\production03.jpg" />
+    <Content Include="images\gallery\production\production04.jpg" />
+    <Content Include="images\gallery\production\production05.jpg" />
+    <Content Include="images\gallery\production\production06.jpg" />
+    <Content Include="images\gallery\production\production07.jpg" />
+    <Content Include="images\gallery\production\production08.jpg" />
+    <Content Include="images\gallery\production\production09.jpg" />
+    <Content Include="images\gallery\production\production10.jpg" />
+    <Content Include="images\gallery\production\production11.jpg" />
+    <Content Include="images\gallery\production\production12.jpg" />
+    <Content Include="images\gallery\production\production13.jpg" />
+    <Content Include="images\gallery\production\production14.jpg" />
+    <Content Include="images\gallery\production\production15.jpg" />
+    <Content Include="images\gallery\production\production16.jpg" />
+    <Content Include="images\gallery\production\production17.jpg" />
+    <Content Include="images\gallery\production\production18.jpg" />
+    <Content Include="images\gallery\production\production19.jpg" />
+    <Content Include="images\ghar-ghar-tiranga.jpeg" />
+    <Content Include="images\ghar-ghar-tiranga1.jpeg" />
+    <Content Include="images\har-ghar-tiranga.jpg" />
+    <Content Include="images\harghar.jpg" />
+    <Content Include="images\header - Copy %282%29.png" />
+    <Content Include="images\header - Copy.png" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\header.png" />
+    <Content Include="images\iconxls.png" />
+    <Content Include="images\igtr-ahd.jpg" />
+    <Content Include="images\igtr-favicon.png" />
+    <Content Include="images\igtr-logo.png" />
+    <Content Include="images\igtr_home - Copy.jpg" />
+    <Content Include="images\igtr_home.jpg" />
+    <Content Include="images\Internship-BE-7th-Sem-02-Weeks-IGTR.jpg" />
+    <Content Include="images\ITI.jpeg" />
+    <Content Include="images\Long-and-Medium-Term-Courses-for-8th-Pass-to-Degree-Engineers-May-June-2023.jpg" />
+    <Content Include="images\Long-Term-Courses-New.jpg" />
+    <Content Include="images\Medium-Term-Certificate-Course-in-CNC-Milling-after-10th-Pass.jpg" />
+    <Content Include="images\Medium-Term-Courses-New.jpg" />
+    <Content Include="images\MTC-Bhavnagar.jpg" />
+    <Content Include="images\MTC-Sanand.jpg" />
+    <Content Include="images\pgpublic.jpg" />
+    <Content Include="images\pgpublic.png" />
+    <Content Include="images\photo_gallery_thumbnail - Copy.jpg" />
+    <Content Include="images\production_thumbnail - Copy.jpg" />
+    <Content Include="images\quality-policy.jpg" />
+    <Content Include="images\RACHA-ESDP.jpg" />
+    <Content Include="images\registration_thumbnail - Copy.jpg" />
+    <Content Include="images\Sanand-BUILDING.jpg" />
+    <Content Include="images\Sanand-CMM-LAB.jpeg" />
+    <Content Include="images\Sanand-CNC-CONSOLE-LAB.jpeg" />
+    <Content Include="images\Sanand-COMPUTER-LAB.jpg" />
+    <Content Include="images\Short-Term-Courses-New.jpg" />
+    <Content Include="images\Short-Term-Summer-Training-Courses-2023-24.jpg" />
+    <Content Include="images\slider\001.jpg" />
+    <Content Include="images\slider\01.jpg" />
+    <Content Include="images\slider\02.jpg" />
+    <Content Include="images\slider\03.jpg" />
+    <Content Include="images\slider\04.jpg" />
+    <Content Include="images\slider\05.jpg" />
+    <Content Include="images\slider\06.jpg" />
+    <Content Include="images\slider\08.jpg" />
+    <Content Include="images\slider\3RD-SEM-DIPLOMA-Summer-Internship.jpg" />
+    <Content Include="images\slider\8th-10th.jpg" />
+    <Content Include="images\slider\Apprentice.jpg" />
+    <Content Include="images\slider\Asst-Opt-CNC-Mill-NABARD-New.jpg" />
+    <Content Include="images\slider\Asst-Opt-CNC-Mill-NABARD.jpg" />
+    <Content Include="images\slider\Asst-Opt-CNC-Milling-New.jpg" />
+    <Content Include="images\slider\Asst-Opt-CNC-Milling.jpg" />
+    <Content Include="images\slider\Diploma-course-2025.jpeg" />
+    <Content Include="images\slider\DTE-2025.jpg" />
+    <Content Include="images\slider\DTM%2724.jpg" />
+    <Content Include="images\slider\DTM.jpeg" />
+    <Content Include="images\slider\ESDP-MSME.jpg" />
+    <Content Include="images\slider\image-1.jpeg" />
+    <Content Include="images\slider\image-2.jpeg" />
+    <Content Include="images\slider\image-3.jpeg" />
+    <Content Include="images\slider\image-4.jpeg" />
+    <Content Include="images\slider\image-5.jpeg" />
+    <Content Include="images\slider\image-6.jpeg" />
+    <Content Include="images\slider\image-7.jpeg" />
+    <Content Include="images\slider\Industrial-Automation.jpg" />
+    <Content Include="images\slider\Internship-BE-7th-Sem-02-Weeks-New.jpg" />
+    <Content Include="images\slider\Internship-BE-7th-Sem-02-Weeks.jpg" />
+    <Content Include="images\slider\Internship-Dip-3rd-Sem-02-Weeks.jpg" />
+    <Content Include="images\slider\Internship-Dip-5th-Sem-05-Weeks.jpg" />
+    <Content Include="images\slider\ITI-Trades.jpg" />
+    <Content Include="images\slider\JDCC-New.jpg" />
+    <Content Include="images\slider\JDCC.jpg" />
+    <Content Include="images\slider\JR-DESIGNER-TOOL-New.jpg" />
+    <Content Include="images\slider\JR-DESIGNER-TOOL.jpg" />
+    <Content Include="images\slider\junior-designer-New.jpeg" />
+    <Content Include="images\slider\junior-designer.jpeg" />
+    <Content Include="images\slider\long-term-course-aug-25.jpeg" />
+    <Content Include="images\slider\long-term-course-guj-aug-25.jpeg" />
+    <Content Include="images\slider\NABARD-AV-2025.jpg" />
+    <Content Include="images\slider\NABARD-AV.jpg" />
+    <Content Include="images\slider\new-course-1.jpg" />
+    <Content Include="images\slider\new-course-2.jpg" />
+    <Content Include="images\slider\new-course-3.jpg" />
+    <Content Include="images\slider\NSSH-2025.jpg" />
+    <Content Include="images\slider\PDTDCC.jpg" />
+    <Content Include="images\slider\PG-JDCC-&amp;-STM-Aug-2025.jpg" />
+    <Content Include="images\slider\PGTDCC-New.jpg" />
+    <Content Include="images\slider\Recruitment.jpg" />
+    <Content Include="images\slider\Senior-Tech-Mecha-May25-New.jpg" />
+    <Content Include="images\slider\Senior-Tech-Mecha-May25.jpg" />
+    <Content Include="images\slider\short-term-skills-New.jpg" />
+    <Content Include="images\slider\short-term-skills.jpeg" />
+    <Content Include="images\slider\slider-img7.jpg" />
+    <Content Include="images\slider\SR-TECH-MECHATRO-New.jpg" />
+    <Content Include="images\slider\SR-TECH-MECHATRO.jpg" />
+    <Content Include="images\slider\Sr-Tool-Designer-%28PG%29.jpg" />
+    <Content Include="images\slider\STC-2025-26-New.jpeg" />
+    <Content Include="images\slider\STC-2025-26.jpg" />
+    <Content Include="images\slider\STC-Nov-25.jpg" />
+    <Content Include="images\slider\summer-intern-1.jpeg" />
+    <Content Include="images\slider\summer-intern-2.jpeg" />
+    <Content Include="images\slider\summer-intern-3.jpeg" />
+    <Content Include="images\slider\Summer-Training-24.jpg" />
+    <Content Include="images\slider\TECHNICIAN-%28CNC-MACHINING%29-New.jpg" />
+    <Content Include="images\slider\TECHNICIAN-%28CNC-MACHINING%29.jpg" />
+    <Content Include="images\slider\TECHNICIAN-CNC-MACHINING-New.jpg" />
+    <Content Include="images\slider\TECHNICIAN-CNC-MACHINING.jpg" />
+    <Content Include="images\Sponsored-Training-New.jpg" />
+    <Content Include="images\STC-23-24.jpeg" />
+    <Content Include="images\STC-Bhavnagar.jpg" />
+    <Content Include="images\STC-Sanand.jpg" />
+    <Content Include="images\Training-Courses-for-Industry-Employees-&amp;-Entrepreneurs.jpg" />
+    <Content Include="images\training_thumnail - Copy %282%29.jpg" />
+    <Content Include="images\training_thumnail - Copy.jpg" />
+    <Content Include="images\Vacancies-for-Apprentice.jpeg" />
+    <Content Include="images\vocationalinnerbann1 - Copy.jpg" />
+    <Content Include="images\WantedGetAndApprentice.jpg" />
+    <Content Include="images\word.png" />
+    <Content Include="images\msme-logo.png" />
+    <Content Include="images\new-animated-gif.gif" />
+    <Content Include="images\new_animated.gif" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\photo_gallery_thumbnail.jpg" />
+    <Content Include="images\production_thumbnail.jpg" />
+    <Content Include="images\quality_policy_certificate.jpg" />
+    <Content Include="images\registration_thumbnail.jpg" />
+    <Content Include="images\training_thumnail.jpg" />
+    <Content Include="images\vocationalinnerbann1.jpg" />
+    <Content Include="images\vocationalinnerbann2.jpg" />
+    <Content Include="images\vocationalinnerbann3.jpg" />
+    <Content Include="igtr.Master" />
+    <Content Include="AdminPanel\Admin.Master" />
+    <Content Include="AdminPanel\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AdminPanel\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AdminPanel\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AdminPanel\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="download\Registration_form_ahd_ashram_road_new.doc" />
+    <Content Include="download\Registration_form_ahd_ashram_road_new.pdf" />
+    <Content Include="download\Registration_form_ahd_rajkot_new.doc" />
+    <Content Include="download\Registration_form_ahd_rajkot_new.pdf" />
+    <Content Include="download\Registration_form_ahd_vatva_new.doc" />
+    <Content Include="download\Registration_form_ahd_vatva_new.pdf" />
+    <Content Include="Gallery\1\Category List.xlsx" />
+    <Content Include="images\header.psd" />
+    <Content Include="images\header1.psd" />
+    <Content Include="download\Consulting-and-Mktg-Brou-Bk.pdf" />
+    <Content Include="download\Indo-German-Tool-Room-Emp-List-RTI.pdf" />
+    <Content Include="download\Indo-German-Tool-Room-Emp-Salary-RTI.pdf" />
+    <Content Include="download\Social_Management_Framework_TCSP.pdf" />
+    <Content Include="download\Training_course_2018-2019.pdf" />
+    <Content Include="download\CMT_18_orange.pdf" />
+    <Content Include="download\Summary SMF doc TCSP.pdf" />
+    <Content Include="download\Indo-Germen-SRV-date-1-10-2016.pdf" />
+    <Content Include="download\High_End_Skill_Trg_for_ST_1_.pdf" />
+    <Content Include="download\DTM_18_orange.pdf" />
+    <Content Include="download\Annual-Report-2015-2016-Hindi-English.pdf" />
+    <Content Include="download\Annual-Report-2016-2017.pdf" />
+    <Content Include="download\Annual-Report-2017-2018.pdf" />
+    <Content Include="download\Annual-Report-2018-2019.pdf" />
+    <Content Include="download\Registration-Form.pdf" />
+    <Content Include="images\WORKSHOP.jpeg" />
+    <Content Include="images\yoda-day-2023.jpg" />
+    <Content Include="ITI-trades.aspx" />
+    <Content Include="long-and-medium-term-courses.aspx" />
+    <Content Include="medium-term-certificate-course-in-CNC-milling.aspx" />
+    <Content Include="NewsEvents\100\Applicaiton form.pdf" />
+    <Content Include="NewsEvents\101\Applicaiton form for Diploma course.pdf" />
+    <Content Include="NewsEvents\102\Advertisement for Diploma course.pdf" />
+    <Content Include="NewsEvents\103\Fee structure for Diploma course.pdf" />
+    <Content Include="NewsEvents\104\Overall view of  Diploma course.pdf" />
+    <Content Include="NewsEvents\105\Tender Notice for Mess Service for Hostel.pdf" />
+    <Content Include="NewsEvents\106\Tender Notice for Surface Grinder.PDF" />
+    <Content Include="NewsEvents\111\CMT New.pdf" />
+    <Content Include="NewsEvents\117\UAM re registration.docx" />
+    <Content Include="NewsEvents\11\scan documents.pdf" />
+    <Content Include="NewsEvents\122\Security Tender Notice Doc 2020Rev.pdf" />
+    <Content Include="NewsEvents\123\प्रकाशित निविदा सूचना के बारे में जानकारी प्राप्त करने के लिए दिशानिर्देश.docx" />
+    <Content Include="NewsEvents\124\प्रकाशित निविदा सूचना के बारे में जानकारी प्राप्त करने के लिए दिशानिर्देश.pdf" />
+    <Content Include="NewsEvents\125\प्रकाशित निविदा सूचना के बारे में जानकारी प्राप्त करने के लिए दिशानिर्देश.pdf" />
+    <Content Include="NewsEvents\126\Leaflet-AKRUTI-BARC.pdf" />
+    <Content Include="NewsEvents\128\Tender Notice for CNC Milling required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\12\CMT_18_orange.pdf" />
+    <Content Include="NewsEvents\130\Tender Notice for Radial Drilling Machine required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\131\Tender Notice for CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\132\Tender Notice for CNC Wire Cut required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\133\प्रकाशित निविदा सूचना %28Tender Notice%29  के बारे में जानकारी प्राप्त करने के लिए दिशानिर्देश।.pdf" />
+    <Content Include="NewsEvents\134\Tender Notice for CNC EDM Die Sinking Machine  required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\136\Tender Notice for CNC Turning plus Milling Simulation   required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\137\Tender Notice for CMM%28500x500x400%29 + QC Lab Technology Instruments   required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\139\Tender Notice rev.1 for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar.docx" />
+    <Content Include="NewsEvents\13\Training_course_2018-2019.pdf" />
+    <Content Include="NewsEvents\140\Tender Notice for rev.1 Radial Drilling Machine required  for IGTR Sub Centre- Bhavnagar.docx" />
+    <Content Include="NewsEvents\141\Tender Notice for rev.1 Radial Drilling Machine required  for IGTR Sub Centre- Bhavnagar-converted.pdf" />
+    <Content Include="NewsEvents\142\Tender Notice rev.1 for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar-converted.pdf" />
+    <Content Include="NewsEvents\143\Tender Notice rev.1 for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar-converted.pdf" />
+    <Content Include="NewsEvents\145\T NoticeR1 for CNC Wire Cut required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\146\T Notice R1 for CNC EDM Die Sinking Machine  required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\147\Tender Notice Rev1 for CNC Milling required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\148\Tender Notice Siemens Turning plus Milling simulation Modules with Controller - CNC Controller Simulator Hardware.pdf" />
+    <Content Include="NewsEvents\151\ANNUAL PROCUREMENT PLAN  YEAR 2020-21..pdf" />
+    <Content Include="NewsEvents\152\annualprocurementplan2021.docx" />
+    <Content Include="NewsEvents\153\annualprocurementplan2021.docx" />
+    <Content Include="NewsEvents\154\annualprocurementplan2021.pdf" />
+    <Content Include="NewsEvents\156\Tender Notice rev.2 for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\157\Tender Notice rev.2 for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\158\Tender Notice  for CNC Milling required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\159\Tender Notice for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\160\Tender Notice for CNC EDM Die Sinking Machine  required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\161\Tender Noticefor CNC Wire Cut required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\163\Tender Notice  for CNC EDM Die Sinking Machine  required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\164\Tender Notice  for CNC Milling required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\165\Tender Notice  for CNC Wire Cut required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\166\Tender Notice for  CNC Lathe Machine required  for IGTR Sub Centre- Bhavnagar.pdf" />
+    <Content Include="NewsEvents\167\Tender Notice Siemens Turning plus Milling simulation Modules with Controller - CNC Controller Simulator Hardware.pdf" />
+    <Content Include="NewsEvents\168\Tender Notice for Supply Installation and commissioning of CNC Wire Cut Machine.pdf" />
+    <Content Include="NewsEvents\169\Tender Notice for Supply Installation and commissioning of CMM plus Lab Technology Instruments for Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\170\Tender Notice for Supply Installation and commissioning of 3- Axis CNC Milling Machine at IGTR Sanand sub Centre.pdf" />
+    <Content Include="NewsEvents\171\Tender Notice for Diesel Generator.pdf" />
+    <Content Include="NewsEvents\172\Tender Notice for Screw Compressor.pdf" />
+    <Content Include="NewsEvents\17\Summary SMF doc TCSP.pdf" />
+    <Content Include="NewsEvents\189\Tender for Disposal of Scrap Items  - Rate Contract.pdf" />
+    <Content Include="NewsEvents\190\Tender for Disposal of Scrap Items  - Rate Contract.pdf" />
+    <Content Include="NewsEvents\192\Advertisement &amp; Bio Data Form.pdf" />
+    <Content Include="NewsEvents\200\QTR - I 20-21 Subsidy.xlsx" />
+    <Content Include="NewsEvents\202\trainnes details of first Qtr. 20-21 %28 Subsidy%29.pdf" />
+    <Content Include="NewsEvents\203\trainees details %281%29 of first Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\205\Trainees details list 1 of second Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\206\Trainees details list 2 of second Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\209\Trainees details list 1 of Third Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\20\VOCATIONAL.pdf" />
+    <Content Include="NewsEvents\210\Trainees details list 2 of Third Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\211\Trainees details list 3 of Third Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\212\Trainees details list 4 of Third Qtr 20-21 %28Subsidy%29.pdf" />
+    <Content Include="NewsEvents\216\Tender for One Time disposal of Scrap Items   Feb - 2021.pdf" />
+    <Content Include="NewsEvents\228\Tender Notice for Supply , Installation and Commissioning of CMM at Bhavnagar &amp; Sanand subcentres.pdf" />
+    <Content Include="NewsEvents\231\Trainees list 1 of 4 th qtr %28 jan-feb%29 subsidy.pdf" />
+    <Content Include="NewsEvents\232\Trainees list 2 of 4 th qtr %28jan-feb%29 subsidy.pdf" />
+    <Content Include="NewsEvents\237\trainees list 1 Qtr 4 march Subsidy.pdf" />
+    <Content Include="NewsEvents\238\trainees list 2 qtr 4  March.pdf" />
+    <Content Include="NewsEvents\239\trainees list 3 Qtr 4 March subsidy.pdf" />
+    <Content Include="NewsEvents\23\PGTDCC Course Details-converted.pdf" />
+    <Content Include="NewsEvents\240\Trainees list 4 qtr 4 March Sbsidy.pdf" />
+    <Content Include="NewsEvents\241\trainees list 1 new Qtr 4 march Subsidy.pdf" />
+    <Content Include="NewsEvents\242\trainees list 2 new qtr 4  March.pdf" />
+    <Content Include="NewsEvents\246\Webinar on 3d printing1.pdf" />
+    <Content Include="NewsEvents\248\Tender Notice%28ReTender%29  for 200T Injection Moulding  Machines  required at IGTR- Bhavnagar sub centre.pdf" />
+    <Content Include="NewsEvents\24\PDTDCC Course Details-converted.pdf" />
+    <Content Include="NewsEvents\258\new list 1 of trainees subsidy March 21.pdf" />
+    <Content Include="NewsEvents\259\new list 2 of trainees subsidy March 21.pdf" />
+    <Content Include="NewsEvents\25\LTC ADV.pdf" />
+    <Content Include="NewsEvents\264\Final-Uniform-Framework-on-EPR-June2020-for-comments.pdf" />
+    <Content Include="NewsEvents\26\Ministry of Micro PDF.pdf" />
+    <Content Include="NewsEvents\275\Tender Notice %28ReTender%29  for Conventional Vertical Milling Machines.pdf" />
+    <Content Include="NewsEvents\276\Tender Notice %28ReTender%29  for Supply and Installation of Injection Moulding Simulation Software.pdf" />
+    <Content Include="NewsEvents\278\Tender Notice for Retrofitment of DMG 70V Machine.pdf" />
+    <Content Include="NewsEvents\281\Trainees list 1 Qtr 1 subsidy 21-22.pdf" />
+    <Content Include="NewsEvents\282\Trainees list 2 Qtr 1 subsidy 21-22.pdf" />
+    <Content Include="NewsEvents\283\Tender Notice for CNC Milling Machine required for Vatva unit-converted.pdf" />
+    <Content Include="NewsEvents\284\User Charges.pdf" />
+    <Content Include="NewsEvents\305\Tender Notice - Request for Proposal for Operating Mobile Workshop Van-converted.pdf" />
+    <Content Include="NewsEvents\306\Tender Notice - RFP  for Operating Mobile Workshop Van.pdf" />
+    <Content Include="NewsEvents\307\Trainees Details list 1 second qtr 21-22.pdf" />
+    <Content Include="NewsEvents\308\Trainees Details list 2 second qtr 21-22.pdf" />
+    <Content Include="NewsEvents\309\Trainees Details list 3 second qtr 21-22.pdf" />
+    <Content Include="NewsEvents\310\Trainees Details list 2 second qtr 21-22.pdf" />
+    <Content Include="NewsEvents\311\Vacancy for Principal Director,FFDC Last date 29 November 2021.pdf" />
+    <Content Include="NewsEvents\312\Ayu-Raksha Kit.pdf" />
+    <Content Include="NewsEvents\313\FFDC ADVT.pdf" />
+    <Content Include="NewsEvents\314\15022022 Advt iro FFDC %282%29.pdf" />
+    <Content Include="NewsEvents\315\15022022 Application format iro FFDC %281%29.pdf" />
+    <Content Include="NewsEvents\316\15022022 Application format iro FFDC %281%29.pdf" />
+    <Content Include="NewsEvents\317\15022022 Application format iro FFDC %281%29.pdf" />
+    <Content Include="NewsEvents\318\E-Tender Notice - Elect. Work to be carried out with supply of Electrical Items , testing and approval at IGTR Sanand EC.pdf" />
+    <Content Include="NewsEvents\319\15022022 Advt iro FFDC %282%29.pdf" />
+    <Content Include="NewsEvents\320\15022022 Application format iro FFDC %281%29.pdf" />
+    <Content Include="NewsEvents\321\15022022 Application format iro FFDC.doc" />
+    <Content Include="NewsEvents\322\Trainees Details list 1 of Third Qtr 21-22 Subcidy.pdf" />
+    <Content Include="NewsEvents\323\Trainees Details list 2 of Third Qtr 21-22 Subsidy.pdf" />
+    <Content Include="NewsEvents\324\Trainees Details List 3 of Third Qtr 21-22 Subsidy.pdf" />
+    <Content Include="NewsEvents\325\DTM overall view.docx" />
+    <Content Include="NewsEvents\326\DTM overall view.docx" />
+    <Content Include="NewsEvents\327\OVERALL VIEW OF DIPLOMA COURSE.pdf" />
+    <Content Include="NewsEvents\328\Mandatory Disclosure.pdf" />
+    <Content Include="NewsEvents\329\Tender  for Raw Materail Steel.pdf" />
+    <Content Include="NewsEvents\32\NBCFDC Advt.pdf" />
+    <Content Include="NewsEvents\330\29th ANNUAL REPORT 2020-21 .pdf" />
+    <Content Include="NewsEvents\331\Mandatory Disclosure AICTE.pdf" />
+    <Content Include="NewsEvents\332\EOA 95-22-compressed.pdf" />
+    <Content Include="NewsEvents\333\Tender Notice -For Supply of Raw Materail Steel.pdf" />
+    <Content Include="NewsEvents\334\Tender  Notice-Disposal of Scrap Items.pdf" />
+    <Content Include="NewsEvents\336\MCCC&amp;CCCM.pdf" />
+    <Content Include="NewsEvents\337\Internship 22-23.pdf" />
+    <Content Include="NewsEvents\338\Internship.pdf" />
+    <Content Include="NewsEvents\339\NBCFDC.pdf" />
+    <Content Include="NewsEvents\33\NBCFDC Advt.pdf" />
+    <Content Include="NewsEvents\344\NBCFDC all.pdf" />
+    <Content Include="NewsEvents\345\Internship_all.pdf" />
+    <Content Include="NewsEvents\346\NBCFDC_compressed.pdf" />
+    <Content Include="NewsEvents\347\Tender for Raw Material Steel for Tool Ref No.  IM 899.pdf" />
+    <Content Include="NewsEvents\348\INTERNATIONAL YOGA DAY.pdf" />
+    <Content Include="NewsEvents\349\INTERNATIONAL YOGA DAY.pdf" />
+    <Content Include="NewsEvents\34\NBCFDC Advt.pdf" />
+    <Content Include="NewsEvents\350\Injection_Molding_Tool.pdf" />
+    <Content Include="NewsEvents\351\DTM CMT.pdf" />
+    <Content Include="NewsEvents\352\DTM CMT.pdf" />
+    <Content Include="NewsEvents\354\PG_PD_22.pdf" />
+    <Content Include="NewsEvents\355\10th_Pass.pdf" />
+    <Content Include="NewsEvents\356\Industry courses.pdf" />
+    <Content Include="NewsEvents\357\PDTDCC_compressed.pdf" />
+    <Content Include="NewsEvents\358\STC_July_2022.pdf" />
+    <Content Include="NewsEvents\35\Banner111.pdf" />
+    <Content Include="NewsEvents\360\STC_July22.pdf" />
+    <Content Include="NewsEvents\361\Trainees Details list 1 of Fourth Quarter 2021-22.pdf" />
+    <Content Include="NewsEvents\362\Trainees details list 2 of Fourth Quarter 2021-22.pdf" />
+    <Content Include="NewsEvents\363\Trainees details list 3 of fourth quarter 2021-22.pdf" />
+    <Content Include="NewsEvents\364\Jan-Feb%2723.pdf" />
+    <Content Include="NewsEvents\365\Jan-Feb%2723.pdf" />
+    <Content Include="NewsEvents\366\Jan%2723.pdf" />
+    <Content Include="NewsEvents\367\STC feb%2723.pdf" />
+    <Content Include="NewsEvents\368\CCCM.pdf" />
+    <Content Include="NewsEvents\369\Trainees List 1 of First Qtr Subsidy 2022-23.pdf" />
+    <Content Include="NewsEvents\36\Agriculture attendance.pdf" />
+    <Content Include="NewsEvents\370\Trainees List 2 of First Qtr Subsidy 2022-23.pdf" />
+    <Content Include="NewsEvents\371\Trainees List 1 of Second Qtr Subsidy2022-23.pdf" />
+    <Content Include="NewsEvents\372\Trainees List 2 of Second Qtr 2022-23.pdf" />
+    <Content Include="NewsEvents\373\10th pass courses Aug%2723.pdf" />
+    <Content Include="NewsEvents\374\15-Mandatory Disclosure 23-24.pdf" />
+    <Content Include="NewsEvents\37\Agriculture attendance.pdf" />
+    <Content Include="NewsEvents\3\scandocuments.pdf" />
+    <Content Include="NewsEvents\40\Grass root innovators seminar of GIAN dated 15.docx" />
+    <Content Include="NewsEvents\41\Attendees of IGTR Workshop_15th July, 2019.xlsx" />
+    <Content Include="NewsEvents\42\Grass root innovators seminar of GIAN1.pdf" />
+    <Content Include="NewsEvents\43\DTM  RESULT.pdf" />
+    <Content Include="NewsEvents\45\CMTshortlist.pdf" />
+    <Content Include="NewsEvents\4\scan documents.pdf" />
+    <Content Include="NewsEvents\50\Tender for  sale of Old Office Vehicle.pdf" />
+    <Content Include="NewsEvents\51\DC Message.pdf" />
+    <Content Include="NewsEvents\56\ESDP-converted.pdf" />
+    <Content Include="NewsEvents\57\27th ANNUAL REPORT 2018-2019.pdf" />
+    <Content Include="NewsEvents\58\GD&amp;T  2-converted.pdf" />
+    <Content Include="NewsEvents\59\E-Procurement Tender  Notice for Shipping Container Classroom Cum Laboratory.pdf" />
+    <Content Include="NewsEvents\61\EXPORT-converted %281%29.pdf" />
+    <Content Include="NewsEvents\64\Tenders Published by IGTR - Ahmedabad.pdf" />
+    <Content Include="NewsEvents\78\SCORE.pdf" />
+    <Content Include="NewsEvents\84\Khasdar Audyogik Mahotsav MSME Brochure.pdf" />
+    <Content Include="NewsEvents\97\DTM Advertisement.pdf" />
+    <Content Include="NewsEvents\98\DTM overall view.pdf" />
+    <Content Include="NewsEvents\99\Fee structure %28DTM%29.pdf" />
+    <Content Include="download\29th-ANNUAL-REPORT-2020-21.pdf" />
+    <Content Include="download\30th-Annual-Report-2021-22.pdf" />
+    <Content Include="download\Advertisement-for-Diploma-course.pdf" />
+    <Content Include="download\Annual-Report-2019-2020.pdf" />
+    <Content Include="download\Applicaiton-form-for-Diploma-course.pdf" />
+    <Content Include="download\Combined-Application-proforma-for-GM&amp;PD.docx" />
+    <Content Include="download\Combined-Application-proforma-for-GM&amp;PD.pdf" />
+    <Content Include="download\Combined-full-Advt.-for-GM-&amp;-PD.pdf" />
+    <Content Include="download\Consulting&amp;MktgBrouBk.pdf" />
+    <Content Include="download\Fee-structure-for-Diploma-course.pdf" />
+    <Content Include="download\igtr-advertisement.pdf" />
+    <Content Include="download\IGTR-Broucher.pdf" />
+    <Content Include="download\New-Registration-form.pdf" />
+    <Content Include="download\NOTICE_23-07-2022_DTM-2022_REV1.pdf" />
+    <Content Include="download\old-Indo-German-Tool-Room-Emp-List-RTI.pdf" />
+    <Content Include="download\Overall-view-of-Diploma-course.pdf" />
+    <Content Include="download\Prospectus1-19-20.pdf" />
+    <Content Include="download\Prospectus_Long_term_22_23_For_PDF_C2C.pdf" />
+    <Content Include="download\Revised-Notice-for-Diploma-In-Tool-And-Die-Making-Admission.pdf" />
+    <Content Include="download\Secretaries_of_all_Ministries_of_GOI.pdf" />
+    <Content Include="download\Training Calendar IGTR Ahmedabad.pdf" />
+    <Content Include="RACHA-course.aspx" />
+    <Content Include="SanandApplyNow.aspx" />
+    <Content Include="SanandCourse.aspx" />
+    <Content Include="SanandPhotoGallery.aspx" />
+    <Content Include="short-term-summer-training-courses.aspx" />
+    <Content Include="success-story.aspx" />
+    <Content Include="training-courses-for-industry-employees-entrepreneurs.aspx" />
+    <Content Include="download\Diploma-&amp;-Certificate-Courses-after-8th-10th-&amp;-12th-Pass.pdf" />
+    <Content Include="download\IGTR-Prospectus-of-Courses_after-8th10th-&amp;-12th-Pass_2023.pdf" />
+    <Content Include="download\Advt-matte-English-&amp;-Gujarati.pdf" />
+    <Content Include="download\IGT-Calendar-%28Combined%29.pdf" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="download\31st-Annual-Report-2022-23.pdf" />
+    <Content Include="download\advertisement.pdf" />
+    <Content Include="download\Course_Prospectus_2024.pdf" />
+    <Content Include="download\Diploma-&amp;-Certificate-Courses-After-8th-10th-&amp;-12th-Pass-New.pdf" />
+    <Content Include="download\Admission-Notice-2024-25-for-Diploma-&amp;-Certificate-Courses.pdf" />
+    <Content Include="download\Training-Calendar-2024.pdf" />
+    <Content Include="download\EC-Sanand-Facility.pdf" />
+    <Content Include="download\EC-Bhavnagar-Facility.pdf" />
+    <Content Include="download\Annual-Report-2023-2024.pdf" />
+    <Content Include="download\GRIPR.pdf" />
+    <Content Include="download\Jay-Industries.pdf" />
+    <Content Include="download\Neerain.pdf" />
+    <Content Include="download\Prime-Solutions.pdf" />
+    <Content Include="download\Shree-Ambika-Industries.pdf" />
+    <Content Include="download\Zeck.pdf" />
+    <Content Include="download\EOA-Report-2024-25.PDF" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="infrastructure.aspx" />
+    <Content Include="inspection-and-quality-control.aspx" />
+    <Content Include="long-term-courses.aspx" />
+    <Content Include="manufacturing.aspx" />
+    <Content Include="medium-term-courses.aspx" />
+    <Content Include="msme.aspx" />
+    <Content Include="NewsEvents\107\Gem.jpg" />
+    <Content Include="NewsEvents\108\water management.jpeg" />
+    <Content Include="NewsEvents\109\CMT 2020.jpg" />
+    <Content Include="NewsEvents\110\Rain Water Harvesting.jpg" />
+    <Content Include="NewsEvents\112\Solar Aug%2720.jpg" />
+    <Content Include="NewsEvents\113\RACHA &amp; HHP adv.jpg" />
+    <Content Include="NewsEvents\114\Webinar on EVCSI.jpg" />
+    <Content Include="NewsEvents\118\DM.jpg" />
+    <Content Include="NewsEvents\119\Online STC Sep%2720.jpg" />
+    <Content Include="NewsEvents\120\Online STC Sep%2720 1.jpg" />
+    <Content Include="NewsEvents\121\3d printing.jpg" />
+    <Content Include="NewsEvents\127\igtr.add.png" />
+    <Content Include="NewsEvents\129\LTC.jpg" />
+    <Content Include="NewsEvents\135\119202230_3429841433744367_7916201969091098818_o.jpg" />
+    <Content Include="NewsEvents\138\Gem.jpg" />
+    <Content Include="NewsEvents\144\CCCT-CCCM.jpg" />
+    <Content Include="NewsEvents\149\WhatsApp Image 2020-09-28 at 1.31.54 PM.jpeg" />
+    <Content Include="NewsEvents\150\PGTDCC.jpeg" />
+    <Content Include="NewsEvents\155\injection moulding.jpg" />
+    <Content Include="NewsEvents\162\mastercam.jpeg" />
+    <Content Include="NewsEvents\16\ncvt.jpg" />
+    <Content Include="NewsEvents\173\hot runner.jpeg" />
+    <Content Include="NewsEvents\174\EXPORT.jpeg" />
+    <Content Include="NewsEvents\178\GD&amp;T.jpeg" />
+    <Content Include="NewsEvents\179\REC.jpeg" />
+    <Content Include="NewsEvents\180\Online STC Nov%2720.jpg" />
+    <Content Include="NewsEvents\181\ccct.jpeg" />
+    <Content Include="NewsEvents\182\Online STC  Dec%2720.jpg" />
+    <Content Include="NewsEvents\183\MCCC.jpg" />
+    <Content Include="NewsEvents\184\ccct.jpeg" />
+    <Content Include="NewsEvents\185\3D PRINTIND DEC-20.jpeg" />
+    <Content Include="NewsEvents\186\solar 2.jpg" />
+    <Content Include="NewsEvents\187\PURCHAS.jpeg" />
+    <Content Include="NewsEvents\188\WhatsApp Image 2020-12-31 at 3.28.45 PM.jpeg" />
+    <Content Include="NewsEvents\191\QUALTY.jpeg" />
+    <Content Include="NewsEvents\193\PGTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\194\PDTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\195\PDIAR Course Details.jpg" />
+    <Content Include="NewsEvents\196\FEB%272021 courses.jpg" />
+    <Content Include="NewsEvents\197\FEB%272021 courses.jpg" />
+    <Content Include="NewsEvents\198\CCTDM Course Details.jpg" />
+    <Content Include="NewsEvents\199\FEB%272021 courses.jpg" />
+    <Content Include="NewsEvents\19\One Day Workshop on 3D Printing.jpeg" />
+    <Content Include="NewsEvents\201\WhatsApp Image 2021-01-15 at 2.05.21 PM.jpeg" />
+    <Content Include="NewsEvents\204\Soft skill 05.02.21.jpg" />
+    <Content Include="NewsEvents\207\Training Calendar.jpg" />
+    <Content Include="NewsEvents\208\FEB%272021 courses.jpg" />
+    <Content Include="NewsEvents\213\interview.jpg" />
+    <Content Include="NewsEvents\214\WhatsApp Image 2021-02-11 at 10.47.14 AM.jpeg" />
+    <Content Include="NewsEvents\215\GEM.jpeg" />
+    <Content Include="NewsEvents\217\press tool-page0001 %281%29.jpg" />
+    <Content Include="NewsEvents\218\NBCFDC.jpeg" />
+    <Content Include="NewsEvents\219\PGTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\21\Course Calendar_1.jpg" />
+    <Content Include="NewsEvents\220\PGTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\221\PDTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\222\PDIAR Course Details.jpg" />
+    <Content Include="NewsEvents\223\CCTDM Course Details.jpg" />
+    <Content Include="NewsEvents\224\NBCFDC.jpeg" />
+    <Content Include="NewsEvents\225\151948925_3877075905687582_337920911422825164_n.jpg" />
+    <Content Include="NewsEvents\226\capicity building.jpg" />
+    <Content Include="NewsEvents\227\gd &amp; t.jpg" />
+    <Content Include="NewsEvents\229\im.jpeg" />
+    <Content Include="NewsEvents\22\FB_advt_113-New.jpg" />
+    <Content Include="NewsEvents\230\0001 %283%29.jpg" />
+    <Content Include="NewsEvents\233\161392182_3944348895626949_4249916607315772792_n.jpg" />
+    <Content Include="NewsEvents\234\3d-printing-seminar.png" />
+    <Content Include="NewsEvents\235\Wanted Get &amp; Apprentice.jpg" />
+    <Content Include="NewsEvents\236\evcsi adv..png" />
+    <Content Include="NewsEvents\243\SPL STC ADV.jpg" />
+    <Content Include="NewsEvents\244\WhatsApp Image 2021-05-05 at 10.42.24 AM.jpeg" />
+    <Content Include="NewsEvents\245\SPL STC ADV.jpg" />
+    <Content Include="NewsEvents\247\FB_IMG_1621238785817.jpg" />
+    <Content Include="NewsEvents\249\press tool maintenance.jpg" />
+    <Content Include="NewsEvents\250\POWER PRESS.jpeg" />
+    <Content Include="NewsEvents\251\Training Calendar-revised 2021-22.jpg" />
+    <Content Include="NewsEvents\252\Internship %281%29.jpg" />
+    <Content Include="NewsEvents\253\FB_IMG_1622461580730.jpg" />
+    <Content Include="NewsEvents\254\EXPORT WEB 5.6.21.jpeg" />
+    <Content Include="NewsEvents\255\Industry 4.0.jpeg" />
+    <Content Include="NewsEvents\256\structure analysis1.jpg" />
+    <Content Include="NewsEvents\257\cceerm 1.jpg" />
+    <Content Include="NewsEvents\260\aug 21 course adv final.jpg" />
+    <Content Include="NewsEvents\261\mccc.jpeg" />
+    <Content Include="NewsEvents\262\3D ANIMATION.jpeg" />
+    <Content Include="NewsEvents\263\WhatsApp Image 2021-06-18 at 3.03.45 PM.jpeg" />
+    <Content Include="NewsEvents\265\hot runner.jpeg" />
+    <Content Include="NewsEvents\266\python.jpg" />
+    <Content Include="NewsEvents\267\AICTE 1.jpeg" />
+    <Content Include="NewsEvents\268\structure analysis2.jpg" />
+    <Content Include="NewsEvents\269\IMG-20210625-WA0004.jpg" />
+    <Content Include="NewsEvents\270\mccc.jpeg" />
+    <Content Include="NewsEvents\271\plastic.jpeg" />
+    <Content Include="NewsEvents\272\DTM CMT ADV.jpg" />
+    <Content Include="NewsEvents\273\New online stc -jul.jpg" />
+    <Content Include="NewsEvents\274\stadd pro.jpg" />
+    <Content Include="NewsEvents\277\phython.jpg" />
+    <Content Include="NewsEvents\279\java.jpeg" />
+    <Content Include="NewsEvents\27\GD&amp;T.jpg" />
+    <Content Include="NewsEvents\280\3D ANIMATION.jpeg" />
+    <Content Include="NewsEvents\285\ACCIQC.jpg" />
+    <Content Include="NewsEvents\286\SKILL TRG_Leaflet21-22.jpg" />
+    <Content Include="NewsEvents\287\ADCHNM.png" />
+    <Content Include="NewsEvents\288\mccpd.jpg" />
+    <Content Include="NewsEvents\289\Revised dtm adv.jpg" />
+    <Content Include="NewsEvents\28\Course Calendar_1.jpg" />
+    <Content Include="NewsEvents\290\PGTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\291\PDTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\292\PDIAR Course Details.jpg" />
+    <Content Include="NewsEvents\293\CCTDM Course Details.jpg" />
+    <Content Include="NewsEvents\294\aug 21 course adv final.jpg" />
+    <Content Include="NewsEvents\295\Post 5.jpg" />
+    <Content Include="NewsEvents\296\post 4.jpg" />
+    <Content Include="NewsEvents\297\Post 2.jpg" />
+    <Content Include="NewsEvents\298\Post 6.jpg" />
+    <Content Include="NewsEvents\299\Post 7.jpg" />
+    <Content Include="NewsEvents\29\Course Calendar_1.jpg" />
+    <Content Include="NewsEvents\300\Post 10.jpg" />
+    <Content Include="NewsEvents\301\Post 11.jpg" />
+    <Content Include="NewsEvents\302\Post 18.jpg" />
+    <Content Include="NewsEvents\303\dtm 2 adv.png" />
+    <Content Include="NewsEvents\304\NBCFDC ADVT.png" />
+    <Content Include="NewsEvents\30\Course Calendar_1.jpg" />
+    <Content Include="NewsEvents\31\Lean-Manufacturing %283%29.jpeg" />
+    <Content Include="NewsEvents\335\ZED.jpg" />
+    <Content Include="NewsEvents\340\10th pass.jpg" />
+    <Content Include="NewsEvents\341\pg_pd.jpg" />
+    <Content Include="NewsEvents\342\Summer May%2722.jpg" />
+    <Content Include="NewsEvents\343\June%2722 Summer Training.jpg" />
+    <Content Include="NewsEvents\353\pg_pd.jpg" />
+    <Content Include="NewsEvents\359\Apprentice Ad 2022.jpg" />
+    <Content Include="NewsEvents\38\E-Procurement.jpeg" />
+    <Content Include="NewsEvents\39\E-Procurement.jpeg" />
+    <Content Include="NewsEvents\44\One-Day-Workshop-on-3D-Printing.jpg" />
+    <Content Include="NewsEvents\46\INDO GERMAN TOOL ROOM AUGUST AD.jpg" />
+    <Content Include="NewsEvents\47\CMT Advt.jpg" />
+    <Content Include="NewsEvents\48\CMT Advt.jpg" />
+    <Content Include="NewsEvents\49\IGIT_Advt_8x8_BW.jpg" />
+    <Content Include="NewsEvents\52\EXPORT.jpg" />
+    <Content Include="NewsEvents\53\Outreach”_26th Sep,19 at New Delhi..jpeg" />
+    <Content Include="NewsEvents\54\SFURTI 1.jpg" />
+    <Content Include="NewsEvents\55\RACHA Advt.jpg" />
+    <Content Include="NewsEvents\60\Solar Energy 2-converted %282%29_page-0001.jpg" />
+    <Content Include="NewsEvents\62\IGIT_Advt-02.jpg" />
+    <Content Include="NewsEvents\63\IGIT_Advt-01.jpg" />
+    <Content Include="NewsEvents\65\Screenshot_20191125_145437~2.jpg" />
+    <Content Include="NewsEvents\66\EFC for FB_page-0001.jpg" />
+    <Content Include="NewsEvents\67\Six Sigma-1.jpg" />
+    <Content Include="NewsEvents\68\Lean Manufacturing 2-page0001.jpg" />
+    <Content Include="NewsEvents\69\PGTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\70\PDTDCC-Course-Details.jpg" />
+    <Content Include="NewsEvents\71\PDIAR Course Details.jpg" />
+    <Content Include="NewsEvents\72\Indo German Pmphlet N.jpg" />
+    <Content Include="NewsEvents\73\0001.jpg" />
+    <Content Include="NewsEvents\74\ESDP-page0001 %281%29.jpg" />
+    <Content Include="NewsEvents\75\hhp.jpg" />
+    <Content Include="NewsEvents\76\gem.jpg" />
+    <Content Include="NewsEvents\77\export business.jpg" />
+    <Content Include="NewsEvents\85\Trg. Seminar - Copy-page0001 %281%29.jpg" />
+    <Content Include="NewsEvents\86\Trg. Seminar - Copy-page0001 %282%29.jpg" />
+    <Content Include="NewsEvents\87\Trg. Seminar-page0001.jpg" />
+    <Content Include="NewsEvents\88\Trg. Seminar-page0001.jpg" />
+    <Content Include="NewsEvents\89\IMG-20200418-WA0009.jpg" />
+    <Content Include="NewsEvents\90\EXPORT 08.06.2020.jpg" />
+    <Content Include="NewsEvents\91\Online STC.jpg" />
+    <Content Include="NewsEvents\92\Webinar Admission_Final.jpg" />
+    <Content Include="NewsEvents\94\3D-Printing-Seminar-1 - Copy.jpg" />
+    <Content Include="NewsEvents\95\3D-Printing-Seminar-1 - Copy.jpg" />
+    <Content Include="NewsEvents\96\LTC Ad.jpg" />
+    <Content Include="objective.aspx" />
+    <Content Include="placement.aspx" />
+    <Content Include="production-center.aspx" />
+    <Content Include="production.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="quality-policy.aspx" />
+    <Content Include="rapid-prototyping.aspx" />
+    <Content Include="rfd.aspx" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\scrollMove.js" />
+    <Content Include="short-term-courses.aspx" />
+    <Content Include="sponsored.aspx" />
+    <Content Include="state-gov-guj.aspx" />
+    <Content Include="student-admission.aspx" />
+    <Content Include="student-registration-form.aspx" />
+    <Content Include="sub-centers.aspx" />
+    <Content Include="sub-gallery.aspx" />
+    <Content Include="tender-form.aspx" />
+    <Content Include="tool-room.aspx" />
+    <Content Include="training-calendar.aspx" />
+    <Content Include="training-center.aspx" />
+    <Content Include="training.aspx" />
+    <Content Include="try-out-and-component-production.aspx" />
+    <Content Include="VDocuments\216\indi german.jpeg" />
+    <Content Include="VDocuments\22\Meet Patra.jpg" />
+    <Content Include="VDocuments\39\Bottle Cooling Tower.jpg" />
+    <Content Include="VDocuments\49\TEW B 1 001.jpg" />
+    <Content Include="VDocuments\56\72x36 1 30   10  15.jpg" />
+    <Content Include="vendor-registration-form.aspx" />
+    <Content Include="vendor-registration.aspx" />
+    <Content Include="vision-mission.aspx" />
+    <Content Include="vocational-courses.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\addnews.aspx.cs">
+      <DependentUpon>addnews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\addnews.aspx.designer.cs">
+      <DependentUpon>addnews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListAlumini.aspx.cs">
+      <DependentUpon>ListAlumini.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListAlumini.aspx.designer.cs">
+      <DependentUpon>ListAlumini.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListGallery.aspx.cs">
+      <DependentUpon>ListGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListGallery.aspx.designer.cs">
+      <DependentUpon>ListGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListNewsEvents.aspx.cs">
+      <DependentUpon>ListNewsEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListNewsEvents.aspx.designer.cs">
+      <DependentUpon>ListNewsEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListProductionInq.aspx.cs">
+      <DependentUpon>ListProductionInq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListProductionInq.aspx.designer.cs">
+      <DependentUpon>ListProductionInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListTrainingInq.aspx.cs">
+      <DependentUpon>ListTrainingInq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListTrainingInq.aspx.designer.cs">
+      <DependentUpon>ListTrainingInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListVendor.aspx.cs">
+      <DependentUpon>ListVendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListVendor.aspx.designer.cs">
+      <DependentUpon>ListVendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\managegallery.aspx.cs">
+      <DependentUpon>managegallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\managegallery.aspx.designer.cs">
+      <DependentUpon>managegallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ManageNewsEvents.aspx.cs">
+      <DependentUpon>ManageNewsEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ManageNewsEvents.aspx.designer.cs">
+      <DependentUpon>ManageNewsEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UpdateGallery.aspx.cs">
+      <DependentUpon>UpdateGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UpdateGallery.aspx.designer.cs">
+      <DependentUpon>UpdateGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alumni.aspx.cs">
+      <DependentUpon>alumni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alumni.aspx.designer.cs">
+      <DependentUpon>alumni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BhavnagarApplyNow.aspx.cs">
+      <DependentUpon>BhavnagarApplyNow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BhavnagarApplyNow.aspx.designer.cs">
+      <DependentUpon>BhavnagarApplyNow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BhavnagarCourse.aspx.cs">
+      <DependentUpon>BhavnagarCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BhavnagarCourse.aspx.designer.cs">
+      <DependentUpon>BhavnagarCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BhavnagarPhotoGallery.aspx.cs">
+      <DependentUpon>BhavnagarPhotoGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BhavnagarPhotoGallery.aspx.designer.cs">
+      <DependentUpon>BhavnagarPhotoGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="career.aspx.cs">
+      <DependentUpon>career.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="career.aspx.designer.cs">
+      <DependentUpon>career.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CNC-machinist-for-ITI.aspx.cs">
+      <DependentUpon>CNC-machinist-for-ITI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CNC-machinist-for-ITI.aspx.designer.cs">
+      <DependentUpon>CNC-machinist-for-ITI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultancy.aspx.cs">
+      <DependentUpon>consultancy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultancy.aspx.designer.cs">
+      <DependentUpon>consultancy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DBCommunication.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="design-and-development.aspx.cs">
+      <DependentUpon>design-and-development.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="design-and-development.aspx.designer.cs">
+      <DependentUpon>design-and-development.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="diploma-and-certificate-courses.aspx.cs">
+      <DependentUpon>diploma-and-certificate-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="diploma-and-certificate-courses.aspx.designer.cs">
+      <DependentUpon>diploma-and-certificate-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee-hiring.aspx.cs">
+      <DependentUpon>employee-hiring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employee-hiring.aspx.designer.cs">
+      <DependentUpon>employee-hiring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extension-centre.aspx.cs">
+      <DependentUpon>extension-centre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extension-centre.aspx.designer.cs">
+      <DependentUpon>extension-centre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="free-summer-camp-for-students.aspx.cs">
+      <DependentUpon>free-summer-camp-for-students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="free-summer-camp-for-students.aspx.designer.cs">
+      <DependentUpon>free-summer-camp-for-students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gallery.aspx.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gallery.aspx.designer.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giz.aspx.cs">
+      <DependentUpon>giz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="giz.aspx.designer.cs">
+      <DependentUpon>giz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="grievance.aspx.cs">
+      <DependentUpon>grievance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="grievance.aspx.designer.cs">
+      <DependentUpon>grievance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="heat-treatment.aspx.cs">
+      <DependentUpon>heat-treatment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="heat-treatment.aspx.designer.cs">
+      <DependentUpon>heat-treatment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="igtr-sub-center.aspx.cs">
+      <DependentUpon>igtr-sub-center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="igtr-sub-center.aspx.designer.cs">
+      <DependentUpon>igtr-sub-center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="igtr.Master.cs">
+      <DependentUpon>igtr.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="igtr.Master.designer.cs">
+      <DependentUpon>igtr.Master</DependentUpon>
+    </Compile>
+    <Compile Include="infrastructure.aspx.cs">
+      <DependentUpon>infrastructure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="infrastructure.aspx.designer.cs">
+      <DependentUpon>infrastructure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inspection-and-quality-control.aspx.cs">
+      <DependentUpon>inspection-and-quality-control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inspection-and-quality-control.aspx.designer.cs">
+      <DependentUpon>inspection-and-quality-control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ITI-trades.aspx.cs">
+      <DependentUpon>ITI-trades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ITI-trades.aspx.designer.cs">
+      <DependentUpon>ITI-trades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="long-and-medium-term-courses.aspx.cs">
+      <DependentUpon>long-and-medium-term-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="long-and-medium-term-courses.aspx.designer.cs">
+      <DependentUpon>long-and-medium-term-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="long-term-courses.aspx.cs">
+      <DependentUpon>long-term-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="long-term-courses.aspx.designer.cs">
+      <DependentUpon>long-term-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manufacturing.aspx.cs">
+      <DependentUpon>manufacturing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manufacturing.aspx.designer.cs">
+      <DependentUpon>manufacturing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medium-term-certificate-course-in-CNC-milling.aspx.cs">
+      <DependentUpon>medium-term-certificate-course-in-CNC-milling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medium-term-certificate-course-in-CNC-milling.aspx.designer.cs">
+      <DependentUpon>medium-term-certificate-course-in-CNC-milling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medium-term-courses.aspx.cs">
+      <DependentUpon>medium-term-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medium-term-courses.aspx.designer.cs">
+      <DependentUpon>medium-term-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="msme.aspx.cs">
+      <DependentUpon>msme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msme.aspx.designer.cs">
+      <DependentUpon>msme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="objective.aspx.cs">
+      <DependentUpon>objective.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="objective.aspx.designer.cs">
+      <DependentUpon>objective.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="placement.aspx.cs">
+      <DependentUpon>placement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="placement.aspx.designer.cs">
+      <DependentUpon>placement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="production-center.aspx.cs">
+      <DependentUpon>production-center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="production-center.aspx.designer.cs">
+      <DependentUpon>production-center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="production.aspx.cs">
+      <DependentUpon>production.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="production.aspx.designer.cs">
+      <DependentUpon>production.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quality-policy.aspx.cs">
+      <DependentUpon>quality-policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quality-policy.aspx.designer.cs">
+      <DependentUpon>quality-policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RACHA-course.aspx.cs">
+      <DependentUpon>RACHA-course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RACHA-course.aspx.designer.cs">
+      <DependentUpon>RACHA-course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rapid-prototyping.aspx.cs">
+      <DependentUpon>rapid-prototyping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rapid-prototyping.aspx.designer.cs">
+      <DependentUpon>rapid-prototyping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rfd.aspx.cs">
+      <DependentUpon>rfd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rfd.aspx.designer.cs">
+      <DependentUpon>rfd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SanandApplyNow.aspx.cs">
+      <DependentUpon>SanandApplyNow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SanandApplyNow.aspx.designer.cs">
+      <DependentUpon>SanandApplyNow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SanandCourse.aspx.cs">
+      <DependentUpon>SanandCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SanandCourse.aspx.designer.cs">
+      <DependentUpon>SanandCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SanandPhotoGallery.aspx.cs">
+      <DependentUpon>SanandPhotoGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SanandPhotoGallery.aspx.designer.cs">
+      <DependentUpon>SanandPhotoGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="short-term-courses.aspx.cs">
+      <DependentUpon>short-term-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="short-term-courses.aspx.designer.cs">
+      <DependentUpon>short-term-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="short-term-summer-training-courses.aspx.cs">
+      <DependentUpon>short-term-summer-training-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="short-term-summer-training-courses.aspx.designer.cs">
+      <DependentUpon>short-term-summer-training-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sponsored.aspx.cs">
+      <DependentUpon>sponsored.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sponsored.aspx.designer.cs">
+      <DependentUpon>sponsored.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="state-gov-guj.aspx.cs">
+      <DependentUpon>state-gov-guj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="state-gov-guj.aspx.designer.cs">
+      <DependentUpon>state-gov-guj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student-admission.aspx.cs">
+      <DependentUpon>student-admission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student-admission.aspx.designer.cs">
+      <DependentUpon>student-admission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student-registration-form.aspx.cs">
+      <DependentUpon>student-registration-form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student-registration-form.aspx.designer.cs">
+      <DependentUpon>student-registration-form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sub-centers.aspx.cs">
+      <DependentUpon>sub-centers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sub-centers.aspx.designer.cs">
+      <DependentUpon>sub-centers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sub-gallery.aspx.cs">
+      <DependentUpon>sub-gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sub-gallery.aspx.designer.cs">
+      <DependentUpon>sub-gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="success-story.aspx.cs">
+      <DependentUpon>success-story.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="success-story.aspx.designer.cs">
+      <DependentUpon>success-story.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tender-form.aspx.cs">
+      <DependentUpon>tender-form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tender-form.aspx.designer.cs">
+      <DependentUpon>tender-form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tool-room.aspx.cs">
+      <DependentUpon>tool-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tool-room.aspx.designer.cs">
+      <DependentUpon>tool-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training-calendar.aspx.cs">
+      <DependentUpon>training-calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training-calendar.aspx.designer.cs">
+      <DependentUpon>training-calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training-center.aspx.cs">
+      <DependentUpon>training-center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training-center.aspx.designer.cs">
+      <DependentUpon>training-center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training-courses-for-industry-employees-entrepreneurs.aspx.cs">
+      <DependentUpon>training-courses-for-industry-employees-entrepreneurs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training-courses-for-industry-employees-entrepreneurs.aspx.designer.cs">
+      <DependentUpon>training-courses-for-industry-employees-entrepreneurs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training.aspx.cs">
+      <DependentUpon>training.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training.aspx.designer.cs">
+      <DependentUpon>training.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="try-out-and-component-production.aspx.cs">
+      <DependentUpon>try-out-and-component-production.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="try-out-and-component-production.aspx.designer.cs">
+      <DependentUpon>try-out-and-component-production.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendor-registration-form.aspx.cs">
+      <DependentUpon>vendor-registration-form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendor-registration-form.aspx.designer.cs">
+      <DependentUpon>vendor-registration-form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendor-registration.aspx.cs">
+      <DependentUpon>vendor-registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendor-registration.aspx.designer.cs">
+      <DependentUpon>vendor-registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vision-mission.aspx.cs">
+      <DependentUpon>vision-mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vision-mission.aspx.designer.cs">
+      <DependentUpon>vision-mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vocational-courses.aspx.cs">
+      <DependentUpon>vocational-courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vocational-courses.aspx.designer.cs">
+      <DependentUpon>vocational-courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\plugins\bootstrap-touchspin\LICENSE.md" />
+    <Content Include="assets\plugins\bootstrap-touchspin\README.md" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\plugins\fancybox\.gitattributes" />
+    <Content Include="assets\plugins\fancybox\CHANGELOG.md" />
+    <Content Include="assets\plugins\fancybox\README.md" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\plugins\font-awesome\less\animated.less" />
+    <Content Include="assets\plugins\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\plugins\font-awesome\less\core.less" />
+    <Content Include="assets\plugins\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\plugins\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\plugins\font-awesome\less\icons.less" />
+    <Content Include="assets\plugins\font-awesome\less\larger.less" />
+    <Content Include="assets\plugins\font-awesome\less\list.less" />
+    <Content Include="assets\plugins\font-awesome\less\mixins.less" />
+    <Content Include="assets\plugins\font-awesome\less\path.less" />
+    <Content Include="assets\plugins\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\plugins\font-awesome\less\stacked.less" />
+    <Content Include="assets\plugins\font-awesome\less\variables.less" />
+    <Content Include="assets\plugins\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_animated.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_core.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_list.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_path.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_variables.scss" />
+    <Content Include="assets\plugins\gmaps\README.md" />
+    <Content Include="assets\plugins\jquery-mixitup\.gitignore" />
+    <Content Include="assets\plugins\jquery-mixitup\bower.json" />
+    <Content Include="assets\plugins\jquery-mixitup\mixitup.jquery.json" />
+    <Content Include="assets\plugins\jquery-mixitup\README.md" />
+    <Content Include="assets\plugins\jquery-slimscroll\README.md" />
+    <Content Include="assets\plugins\jquery-slimscroll\slimScroll.jquery.json" />
+    <Content Include="assets\plugins\jquery.min.map" />
+    <Content Include="assets\plugins\rateit\src\jquery.rateit.min.js.map" />
+    <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="assets\plugins\uniform\css\uniform.default.scss" />
+    <Content Include="assets\plugins\uniform\README.md" />
+    <Content Include="download\calender.pdf" />
+    <Content Include="download\mtc_stc.pdf" />
+    <Content Include="download\Prospectus1.pdf" />
+    <Content Include="VDocuments\1\Category List.xlsx" />
+    <Content Include="VDocuments\101\Shiv Shakti Metal Catalogue %281%29.pdf" />
+    <Content Include="VDocuments\109\MicroIoT-1000.pdf" />
+    <Content Include="VDocuments\10\NSIC.pdf" />
+    <Content Include="VDocuments\110\MANGLAM WELDING RODE- AUTH SHREE INDUSTRIES.pdf" />
+    <Content Include="VDocuments\111\DAA BUSINESS M.pdf" />
+    <Content Include="VDocuments\123\Udyam Labdhi Enterprise.pdf" />
+    <Content Include="VDocuments\128\PROFILE 2021.pdf" />
+    <Content Include="VDocuments\129\VIPAC_Garments_Catalouge.pdf" />
+    <Content Include="VDocuments\12\Company Profile-SRI.pdf" />
+    <Content Include="VDocuments\136\DIVYA CIRCULAR IGTR.docx" />
+    <Content Include="VDocuments\139\Product List.docx" />
+    <Content Include="VDocuments\160\Our Services.pdf" />
+    <Content Include="VDocuments\167\MANGLAM WELDING RODE.pdf" />
+    <Content Include="VDocuments\170\rtw company profile.pdf" />
+    <Content Include="VDocuments\17\MSME.pdf" />
+    <Content Include="VDocuments\182\1COMPANY PROFILE EPSILON-compressed_compressed_11zon.pdf" />
+    <Content Include="VDocuments\18\Quality Consulting profile.pdf" />
+    <Content Include="VDocuments\196\Worksheet.xlsx.pdf" />
+    <Content Include="VDocuments\212\Line card-2022.pdf" />
+    <Content Include="VDocuments\213\Line card-2022.pdf" />
+    <Content Include="VDocuments\235\PROFILE-OM ELECTRICAL.pdf" />
+    <Content Include="VDocuments\24\Catalogue.pdf" />
+    <Content Include="VDocuments\26\PRODUCTION  CAPACITY - Sumip.pdf" />
+    <Content Include="VDocuments\27\3. PUSTRON Catalogue.pdf" />
+    <Content Include="VDocuments\2\main.docx" />
+    <Content Include="VDocuments\31\Catalogue  Randhir.pdf" />
+    <Content Include="VDocuments\32\Introduction latter LMI.docx" />
+    <Content Include="VDocuments\36\Toolox-Substitutions.pdf" />
+    <Content Include="VDocuments\37\Toolox-Substitutions.pdf" />
+    <Content Include="VDocuments\3\pwd.pdf" />
+    <Content Include="VDocuments\41\Product Catalogue.pdf" />
+    <Content Include="VDocuments\42\HARJIT CRANE PROFILE.pdf" />
+    <Content Include="VDocuments\43\CATALOG - Liquid-cylinders-TWM-B014-Rev00-1.pdf" />
+    <Content Include="VDocuments\53\PRODUCT LIST.pdf" />
+    <Content Include="VDocuments\57\KANADIA PROFILE%281%29.pdf" />
+    <Content Include="VDocuments\58\KANADIA PROFILE%281%29.pdf" />
+    <Content Include="VDocuments\61\MECProfile.pdf" />
+    <Content Include="VDocuments\65\COMPANY PROFILE 15.07.pdf" />
+    <Content Include="VDocuments\68\PRODUCTION.docx" />
+    <Content Include="VDocuments\69\GST Number - Gujarat.pdf" />
+    <Content Include="VDocuments\74\Techstone Profile.pdf" />
+    <Content Include="VDocuments\79\Quotation - Stationery, Housekeeping &amp; Pantry.xlsx" />
+    <Content Include="VDocuments\91\DB IMPEX Company Profile.pdf" />
+    <Content Include="VDocuments\96\AMAR Profile for OEM_Tenova.pdf" />
+    <Content Include="VDocuments\9\IGTR-Ahmdabad-Registration.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminPanel\Gallery\" />
+    <Folder Include="Gallery\43\" />
+    <Folder Include="Gallery\44\" />
+    <Folder Include="Gallery\45\" />
+    <Folder Include="VDocuments\100\" />
+    <Folder Include="VDocuments\102\" />
+    <Folder Include="VDocuments\103\" />
+    <Folder Include="VDocuments\104\" />
+    <Folder Include="VDocuments\105\" />
+    <Folder Include="VDocuments\106\" />
+    <Folder Include="VDocuments\107\" />
+    <Folder Include="VDocuments\108\" />
+    <Folder Include="VDocuments\112\" />
+    <Folder Include="VDocuments\113\" />
+    <Folder Include="VDocuments\114\" />
+    <Folder Include="VDocuments\115\" />
+    <Folder Include="VDocuments\116\" />
+    <Folder Include="VDocuments\117\" />
+    <Folder Include="VDocuments\118\" />
+    <Folder Include="VDocuments\119\" />
+    <Folder Include="VDocuments\11\" />
+    <Folder Include="VDocuments\120\" />
+    <Folder Include="VDocuments\121\" />
+    <Folder Include="VDocuments\122\" />
+    <Folder Include="VDocuments\124\" />
+    <Folder Include="VDocuments\125\" />
+    <Folder Include="VDocuments\126\" />
+    <Folder Include="VDocuments\127\" />
+    <Folder Include="VDocuments\130\" />
+    <Folder Include="VDocuments\131\" />
+    <Folder Include="VDocuments\132\" />
+    <Folder Include="VDocuments\133\" />
+    <Folder Include="VDocuments\134\" />
+    <Folder Include="VDocuments\135\" />
+    <Folder Include="VDocuments\137\" />
+    <Folder Include="VDocuments\138\" />
+    <Folder Include="VDocuments\13\" />
+    <Folder Include="VDocuments\140\" />
+    <Folder Include="VDocuments\141\" />
+    <Folder Include="VDocuments\142\" />
+    <Folder Include="VDocuments\143\" />
+    <Folder Include="VDocuments\144\" />
+    <Folder Include="VDocuments\145\" />
+    <Folder Include="VDocuments\146\" />
+    <Folder Include="VDocuments\147\" />
+    <Folder Include="VDocuments\148\" />
+    <Folder Include="VDocuments\149\" />
+    <Folder Include="VDocuments\14\" />
+    <Folder Include="VDocuments\150\" />
+    <Folder Include="VDocuments\151\" />
+    <Folder Include="VDocuments\152\" />
+    <Folder Include="VDocuments\153\" />
+    <Folder Include="VDocuments\154\" />
+    <Folder Include="VDocuments\155\" />
+    <Folder Include="VDocuments\156\" />
+    <Folder Include="VDocuments\157\" />
+    <Folder Include="VDocuments\158\" />
+    <Folder Include="VDocuments\159\" />
+    <Folder Include="VDocuments\15\" />
+    <Folder Include="VDocuments\161\" />
+    <Folder Include="VDocuments\162\" />
+    <Folder Include="VDocuments\163\" />
+    <Folder Include="VDocuments\164\" />
+    <Folder Include="VDocuments\165\" />
+    <Folder Include="VDocuments\166\" />
+    <Folder Include="VDocuments\168\" />
+    <Folder Include="VDocuments\169\" />
+    <Folder Include="VDocuments\16\" />
+    <Folder Include="VDocuments\171\" />
+    <Folder Include="VDocuments\172\" />
+    <Folder Include="VDocuments\173\" />
+    <Folder Include="VDocuments\174\" />
+    <Folder Include="VDocuments\175\" />
+    <Folder Include="VDocuments\176\" />
+    <Folder Include="VDocuments\177\" />
+    <Folder Include="VDocuments\178\" />
+    <Folder Include="VDocuments\179\" />
+    <Folder Include="VDocuments\180\" />
+    <Folder Include="VDocuments\181\" />
+    <Folder Include="VDocuments\183\" />
+    <Folder Include="VDocuments\184\" />
+    <Folder Include="VDocuments\185\" />
+    <Folder Include="VDocuments\186\" />
+    <Folder Include="VDocuments\187\" />
+    <Folder Include="VDocuments\188\" />
+    <Folder Include="VDocuments\189\" />
+    <Folder Include="VDocuments\190\" />
+    <Folder Include="VDocuments\191\" />
+    <Folder Include="VDocuments\192\" />
+    <Folder Include="VDocuments\193\" />
+    <Folder Include="VDocuments\194\" />
+    <Folder Include="VDocuments\195\" />
+    <Folder Include="VDocuments\197\" />
+    <Folder Include="VDocuments\198\" />
+    <Folder Include="VDocuments\199\" />
+    <Folder Include="VDocuments\19\" />
+    <Folder Include="VDocuments\200\" />
+    <Folder Include="VDocuments\201\" />
+    <Folder Include="VDocuments\202\" />
+    <Folder Include="VDocuments\203\" />
+    <Folder Include="VDocuments\204\" />
+    <Folder Include="VDocuments\205\" />
+    <Folder Include="VDocuments\206\" />
+    <Folder Include="VDocuments\207\" />
+    <Folder Include="VDocuments\208\" />
+    <Folder Include="VDocuments\209\" />
+    <Folder Include="VDocuments\20\" />
+    <Folder Include="VDocuments\210\" />
+    <Folder Include="VDocuments\211\" />
+    <Folder Include="VDocuments\214\" />
+    <Folder Include="VDocuments\215\" />
+    <Folder Include="VDocuments\217\" />
+    <Folder Include="VDocuments\218\" />
+    <Folder Include="VDocuments\219\" />
+    <Folder Include="VDocuments\21\" />
+    <Folder Include="VDocuments\220\" />
+    <Folder Include="VDocuments\221\" />
+    <Folder Include="VDocuments\222\" />
+    <Folder Include="VDocuments\223\" />
+    <Folder Include="VDocuments\224\" />
+    <Folder Include="VDocuments\225\" />
+    <Folder Include="VDocuments\226\" />
+    <Folder Include="VDocuments\227\" />
+    <Folder Include="VDocuments\228\" />
+    <Folder Include="VDocuments\229\" />
+    <Folder Include="VDocuments\230\" />
+    <Folder Include="VDocuments\231\" />
+    <Folder Include="VDocuments\232\" />
+    <Folder Include="VDocuments\233\" />
+    <Folder Include="VDocuments\234\" />
+    <Folder Include="VDocuments\23\" />
+    <Folder Include="VDocuments\25\" />
+    <Folder Include="VDocuments\28\" />
+    <Folder Include="VDocuments\29\" />
+    <Folder Include="VDocuments\30\" />
+    <Folder Include="VDocuments\33\" />
+    <Folder Include="VDocuments\34\" />
+    <Folder Include="VDocuments\35\" />
+    <Folder Include="VDocuments\38\" />
+    <Folder Include="VDocuments\40\" />
+    <Folder Include="VDocuments\44\" />
+    <Folder Include="VDocuments\45\" />
+    <Folder Include="VDocuments\46\" />
+    <Folder Include="VDocuments\47\" />
+    <Folder Include="VDocuments\48\" />
+    <Folder Include="VDocuments\4\" />
+    <Folder Include="VDocuments\50\" />
+    <Folder Include="VDocuments\51\" />
+    <Folder Include="VDocuments\52\" />
+    <Folder Include="VDocuments\54\" />
+    <Folder Include="VDocuments\55\" />
+    <Folder Include="VDocuments\59\" />
+    <Folder Include="VDocuments\5\" />
+    <Folder Include="VDocuments\60\" />
+    <Folder Include="VDocuments\62\" />
+    <Folder Include="VDocuments\63\" />
+    <Folder Include="VDocuments\64\" />
+    <Folder Include="VDocuments\66\" />
+    <Folder Include="VDocuments\67\" />
+    <Folder Include="VDocuments\6\" />
+    <Folder Include="VDocuments\70\" />
+    <Folder Include="VDocuments\71\" />
+    <Folder Include="VDocuments\72\" />
+    <Folder Include="VDocuments\73\" />
+    <Folder Include="VDocuments\75\" />
+    <Folder Include="VDocuments\76\" />
+    <Folder Include="VDocuments\77\" />
+    <Folder Include="VDocuments\78\" />
+    <Folder Include="VDocuments\7\" />
+    <Folder Include="VDocuments\80\" />
+    <Folder Include="VDocuments\81\" />
+    <Folder Include="VDocuments\82\" />
+    <Folder Include="VDocuments\83\" />
+    <Folder Include="VDocuments\84\" />
+    <Folder Include="VDocuments\85\" />
+    <Folder Include="VDocuments\86\" />
+    <Folder Include="VDocuments\87\" />
+    <Folder Include="VDocuments\88\" />
+    <Folder Include="VDocuments\89\" />
+    <Folder Include="VDocuments\8\" />
+    <Folder Include="VDocuments\90\" />
+    <Folder Include="VDocuments\92\" />
+    <Folder Include="VDocuments\93\" />
+    <Folder Include="VDocuments\94\" />
+    <Folder Include="VDocuments\95\" />
+    <Folder Include="VDocuments\97\" />
+    <Folder Include="VDocuments\98\" />
+    <Folder Include="VDocuments\99\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>28843</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2815/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

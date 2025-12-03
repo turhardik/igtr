@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=http://103.224.241.105:8880/smb/file-manager/list#
+HostUrl=http://103.224.241.105:8880/smb/file-manager/download?currentDir=%2Fhttpdocs&file=igtr-sub-center.aspx
