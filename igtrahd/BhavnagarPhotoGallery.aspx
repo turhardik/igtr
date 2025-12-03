@@ -10,6 +10,7 @@
       -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
       box-shadow: 0 1px 1px rgba(0,0,0,0.05);
     }
+
     .panel-heading {
       padding: 10px 15px;
       margin: -15px -15px 15px;
