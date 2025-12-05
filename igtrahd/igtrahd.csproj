@@ -458,6 +458,7 @@
     <Content Include="BhavnagarPhotoGallery.aspx" />
     <Content Include="career.aspx" />
     <Content Include="CNC-machinist-for-ITI.aspx" />
+    <Content Include="CompanyRegistration.aspx" />
     <Content Include="consultancy.aspx" />
     <Content Include="contact-us.aspx" />
     <Content Include="default.aspx" />
@@ -1495,6 +1496,13 @@
     </Compile>
     <Compile Include="CNC-machinist-for-ITI.aspx.designer.cs">
       <DependentUpon>CNC-machinist-for-ITI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyRegistration.aspx.cs">
+      <DependentUpon>CompanyRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyRegistration.aspx.designer.cs">
+      <DependentUpon>CompanyRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="consultancy.aspx.cs">
       <DependentUpon>consultancy.aspx</DependentUpon>

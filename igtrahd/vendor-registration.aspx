@@ -18,7 +18,6 @@
             <p style="margin-top: 5px;">
                 Vendor Name&nbsp;:&nbsp;<asp:TextBox ID="txtVName" runat="server" CssClass="form-control"></asp:TextBox>
             </p>
-
             <p>
                 Address&nbsp;:&nbsp;<asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
             </p>

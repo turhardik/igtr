@@ -133,64 +133,124 @@
           text-decoration:underline;
           color: #F65314;
         }
-        .marquee-box {
-          width: 100%;
-          overflow: hidden;
-          position: relative;
-          padding: 5px 0;
-        }
-        .marquee-track {
-          display: flex;
-          width: max-content;
-          animation: marquee-scroll 18s linear infinite; /* speed yahan se control */
-        }
-        /* ek content block (2x3 grid) */
-        .marquee-content {
-          flex: 0 0 auto;
-          min-width: 100%; /* full width cover kare */
-        }
-        /* 2 column × 3 row grid */
-        .marquee-grid {
-          display: grid !important;
-          grid-auto-flow: column;
-          grid-template-rows: repeat(3, auto);
-          row-gap: 3px;
-          column-gap: 10px;
-          margin: 0;
-          padding: 0;
-          list-style: none;
-        }
-        .marquee-grid li {
-          display: block !important;
-        }
-        .marquee-grid li a {
-          white-space: nowrap;
-          font-size: 14px;
-          font-weight: 600;
-          text-decoration: none;
-        }
-        /* JS se distance set hoga */
-        @keyframes marquee-scroll {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(calc(-1 * var(--marquee-width, 100%))); }
-        }
+/* container */
+.marquee-box {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+  /* allow hover to pause */
+}
+
+/* track moves horizontally; duration controlled by --marquee-duration */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  --marquee-duration: 30s; /* <--- slow default (change as needed) */
+  animation: marquee-scroll var(--marquee-duration) linear infinite;
+  will-change: transform;
+}
+
+/* pause on hover */
+.marquee-box:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* one content block (will be cloned) */
+.marquee-content {
+  flex: 0 0 auto;
+  min-width: 60%;
+  box-sizing: border-box;
+}
+
+/* grid: 2 columns x 3 rows (column-wise filling) */
+.marquee-grid {
+  display: grid !important;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 2px;
+  column-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ensure li display block and links visible/clickable */
+.marquee-grid li {
+  display: block !important;
+}
+
+.marquee-grid li a {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+/* animation: translate left by the width of one content block (set by JS var) */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-width, 100%))); }
+}
     </style>
-    <script>
-      window.addEventListener("load", function () {
-        const track = document.getElementById("marqueeTrack");
-        const content = document.getElementById("marqueeContent");
-        const clone = document.querySelector(".marquee-clone");
+<script>
+  (function () {
+    // run after page load
+    function setupMarquee() {
+      const track = document.getElementById('marqueeTrack');
+      const content = document.getElementById('marqueeContent');
+      const clone = document.getElementById('marqueeClone');
 
-        // content ko clone karo (continuous scroll trick)
-        clone.innerHTML = content.innerHTML;
+      if (!track || !content || !clone) return;
 
-        // asli content ki width nikaalo
-        const contentWidth = content.offsetWidth;
+      // Flatten nested ULs if your Repeater rendered <ul><li>... structure inside each item
+      // Get all li elements inside content and rebuild a single UL.marquee-grid
+      const liElements = content.querySelectorAll('li');
+      if (liElements.length) {
+        const liHtml = Array.from(liElements).map(li => '<li>' + li.innerHTML + '</li>').join('');
+        content.innerHTML = '<ul class="marquee-grid">' + liHtml + '</ul>';
+      } else {
+        // If markup is already correct, ensure it has marquee-grid class
+        const existingUL = content.querySelector('ul');
+        if (existingUL && !existingUL.classList.contains('marquee-grid')) {
+          existingUL.classList.add('marquee-grid');
+        }
+      }
 
-        // CSS variable me set karo (jitni width utna hi scroll hoga)
-        track.style.setProperty("--marquee-width", contentWidth + "px");
-      });
-    </script>
+      // clone the content for seamless scroll
+      clone.innerHTML = content.innerHTML;
+
+      // compute width of original content block (including gaps)
+      // use getBoundingClientRect for subpixel accuracy
+      const contentBlock = content;
+      const contentWidth = Math.ceil(contentBlock.getBoundingClientRect().width);
+
+      // set CSS variable for animation distance
+      track.style.setProperty('--marquee-width', contentWidth + 'px');
+
+      // Optional: adjust duration based on content width to keep perceived speed consistent
+      // baseSpeed is pixels per second (lower -> slower). Adjust to taste.
+      const baseSpeed = 40; // px per second (smaller = slower)
+      const duration = Math.max(8, Math.round(contentWidth / baseSpeed)); // at least 8s
+      // If you want fixed slow speed, comment the two lines above and use CSS var directly
+      track.style.setProperty('--marquee-duration', duration + 's');
+
+      // ensure links remain clickable (no pointer-events issue)
+      // no extra code needed; links are clickable by default
+    }
+
+    // init on load
+    window.addEventListener('load', setupMarquee);
+    // recompute on resize to handle responsive
+    window.addEventListener('resize', function () {
+      // debounce resize to avoid thrash
+      clearTimeout(window.__marqueeResizeTimer);
+      window.__marqueeResizeTimer = setTimeout(setupMarquee, 250);
+    });
+  })();
+</script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -428,29 +488,23 @@
                   <div class="marquee-track" id="marqueeTrack">
 
                     <div class="marquee-content" id="marqueeContent">
-                      <ul class="marquee-grid">
-                       <asp:Repeater ID="rptNewsEvents" runat="server" OnItemDataBound="rptNewsEvents_ItemDataBound">
-
-                                    <ItemTemplate>
-                                        <ul class="list-unstyled">
-
-                                            <li>
-                                                <a id="hlData" target="_blank" runat="server"><%#Eval("Name")%></a>
-                                                <asp:HiddenField ID="hdType" runat="server" Value='<%#Eval("Type")%>' />
-                                                <asp:HiddenField ID="hdFileURL" runat="server" Value='<%#Eval("Description")%>' />
-                                                <asp:HiddenField ID="hdID" runat="server" Value='<%#Eval("ID")%>' />
-
-                                            </li>
-
-                                        </ul>
-                                    </ItemTemplate>
-
-
-                                </asp:Repeater>
+                      <ul class="marquee-grid" id="marqueeGrid">
+                          <asp:Repeater ID="rptNewsEvents" runat="server" OnItemDataBound="rptNewsEvents_ItemDataBound">
+                              <ItemTemplate>
+                                  <ul class="list-unstyled">
+                                      <li>
+                                          <a id="hlData" target="_blank" runat="server"><%#Eval("Name")%></a>
+                                          <asp:HiddenField ID="hdType" runat="server" Value='<%#Eval("Type")%>' />
+                                          <asp:HiddenField ID="hdFileURL" runat="server" Value='<%#Eval("Description")%>' />
+                                          <asp:HiddenField ID="hdID" runat="server" Value='<%#Eval("ID")%>' />
+                                      </li>
+                                  </ul>
+                              </ItemTemplate>
+                          </asp:Repeater>
                       </ul>
                     </div>
 
-                    <div class="marquee-content marquee-clone"></div>
+                    <div class="marquee-content marquee-clone" id="marqueeClone"></div>
                   </div>
                 </div>
               </div>
@@ -464,29 +518,15 @@
             <div class="container">
                 <!-- BEGIN SERVICE BOX -->
                 <div class="row service-box margin-bottom-40">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
-                    </div>
-                    <!-- TESTIMONIALS -->
-                    <div class="col-md-4 testimonials-v1">
-                        <div class="service-box-heading">
-                            <span>News Updates</span>
-                        </div>
-                        <div class="microsoft containerr">
-                            <div class="marquee">
-                               
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END TESTIMONIALS -->
+                    </div>                    
                     <div class="col-md-12">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
                 </div>
-
             </div>
             <!-- END SERVICE BOX -->
         </div>
