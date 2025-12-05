@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="Indo German Tool Room - Ahmedabad" />
     <!-- link to image for socio -->
-    <meta property="og:url" content="Indo German Tool Room - Ahmedabad">
+    <meta property="og:url" content="Indo German Tool Room - Ahmedabad" />
     <link rel="shortcut icon" type="image/x-icon" href="images/igtr-favicon.png" />
     <!-- Fonts START -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all"
@@ -39,7 +39,7 @@
     <link href="assets/corporate/css/themes/blue.css" rel="stylesheet" />
     <link href="assets/corporate/css/custom.css" rel="stylesheet" />
     <!-- Theme styles END -->
-    <link href="assets/pages/css/portfolio.css" rel="stylesheet">
+    <link href="assets/pages/css/portfolio.css" rel="stylesheet" />
     <style type="text/css">
         .containerr {
             width: 100%;
@@ -109,16 +109,88 @@
             font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
         }
 
-            .vanity a, .microsoft a {
-                color: #1570A6;
-                transition: color .5s;
-                text-decoration: none;
-            }
+        .vanity a, .microsoft a {
+            color: #1570A6;
+            transition: color .5s;
+            text-decoration: none;
+        }
 
-                .vanity a:hover, .microsoft a:hover {
-                    color: #F65314;
-                }
+        .vanity a:hover, .microsoft a:hover {
+            color: #F65314;
+        }
+        .mb0{margin-bottom: 0px;}
+        .box_wall{
+          min-height: 20px;
+          padding: 15px;
+          margin-bottom: 20px;
+          background-color: #f5f5f5;
+          border: 1px solid #e3e3e3;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);      
+        }
+        .marquee-grid li a:hover{
+          text-decoration:underline;
+          color: #F65314;
+        }
+        .marquee-box {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          padding: 5px 0;
+        }
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: marquee-scroll 18s linear infinite; /* speed yahan se control */
+        }
+        /* ek content block (2x3 grid) */
+        .marquee-content {
+          flex: 0 0 auto;
+          min-width: 100%; /* full width cover kare */
+        }
+        /* 2 column × 3 row grid */
+        .marquee-grid {
+          display: grid !important;
+          grid-auto-flow: column;
+          grid-template-rows: repeat(3, auto);
+          row-gap: 3px;
+          column-gap: 10px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        .marquee-grid li {
+          display: block !important;
+        }
+        .marquee-grid li a {
+          white-space: nowrap;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+        /* JS se distance set hoga */
+        @keyframes marquee-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(calc(-1 * var(--marquee-width, 100%))); }
+        }
     </style>
+    <script>
+      window.addEventListener("load", function () {
+        const track = document.getElementById("marqueeTrack");
+        const content = document.getElementById("marqueeContent");
+        const clone = document.querySelector(".marquee-clone");
+
+        // content ko clone karo (continuous scroll trick)
+        clone.innerHTML = content.innerHTML;
+
+        // asli content ki width nikaalo
+        const contentWidth = content.offsetWidth;
+
+        // CSS variable me set karo (jitni width utna hi scroll hoga)
+        track.style.setProperty("--marquee-width", contentWidth + "px");
+      });
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -131,7 +203,7 @@
                 <a href="javascript:void(0);" class="mobi-toggler" style="z-index: 999999;"><i class="fa fa-bars"></i></a>
                 <!-- BEGIN NAVIGATION -->
                 <div class="col-md-12">
-                    <img src="images/header.jpg" class="img-responsive" long-discription=" MSME Technology Center,  Indo German Tool Room - Ahmedabad (An ISO 9001: 2015 certified Tool Room & Training Center)" />
+                    <img src="images/header.jpg" class="img-responsive" alt=" MSME Technology Center,  Indo German Tool Room - Ahmedabad (An ISO 9001: 2015 certified Tool Room & Training Center)" />
                 </div>
                 <div class="header-navigation font-transform-inherit" style="z-index: 999999;">
                     <ul>
@@ -198,6 +270,7 @@
                                                     <li><a href="try-out-and-component-production.aspx">Try Out & Component Production</a></li>
                                                     <li><a href="inspection-and-quality-control.aspx">Inspection & Quality Control</a></li>
                                                     <li><a href="infrastructure.aspx">Infrastructure</a></li>
+                                                    <li><a href="vendor-registration-form.aspx">Vendor Registration Form</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -225,6 +298,7 @@
                                                     <li><a href="download/EOA-Report-2024-25.PDF" target="_blank">LOA EOA for Diploma Course</a></li>
                                                     <li><a href="grievance.aspx">MSME Technology Centre Online Grievance</a></li>
                                                     <li><a href="https://www.aicte-india.org/feedback/" target="_blank">AICTE Students/Faculty Feedback</a></li>
+                                                    <li><a href="student-registration-form.aspx">Student Registration Form</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -260,24 +334,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown dropdown-megamenu"><a class="dropdown-toggle" data-toggle="dropdown"
-                            data-target="#" href="javascript:;">Download</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="header-navigation-content">
-                                        <div class="row">
-                                            <div class="header-navigation-col">
-                                                <ul>
-                                                    <li><a href="student-registration-form.aspx">Student Registration Form</a></li>
-                                                    <li><a href="vendor-registration-form.aspx">Vendor Registration Form</a></li>
-                                                    <li><a href="tender-form.aspx">Tender Form </a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                        <li><a href="placement.aspx">Placement</a></li>
                         <li><a href="career.aspx">Career </a></li>
                         <li><a href="contact-us.aspx">Contact Us </a></li>
                     </ul>
@@ -288,7 +345,7 @@
         <!-- Header END -->
         <!-- BEGIN SLIDER -->
         <div class="container">
-            <div class="page-slider margin-bottom-40">
+            <div class="page-slider">
                 <div id="carousel-example-generic" class="carousel slide carousel-slider">
                     <!-- Indicators -->
                     <ol class="carousel-indicators carousel-indicators-frontend">
@@ -361,22 +418,18 @@
             </div>
         </div>
         <!-- END SLIDER -->
-        <div class="main">
-            <div class="container">
-                <!-- BEGIN SERVICE BOX -->
-                <div class="row service-box margin-bottom-40">
-                    <div class="col-md-8">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder>
-                    </div>
-                    <!-- TESTIMONIALS -->
-                    <div class="col-md-4 testimonials-v1">
-                        <div class="service-box-heading">
-                            <span>News Updates</span>
-                        </div>
-                        <div class="microsoft containerr">
-                            <div class="marquee">
-                                <asp:Repeater ID="rptNewsEvents" runat="server" OnItemDataBound="rptNewsEvents_ItemDataBound">
+        <div class="clearfix"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="box_wall">
+                <div class="marquee-box">
+                  <div class="marquee-track" id="marqueeTrack">
+
+                    <div class="marquee-content" id="marqueeContent">
+                      <ul class="marquee-grid">
+                       <asp:Repeater ID="rptNewsEvents" runat="server" OnItemDataBound="rptNewsEvents_ItemDataBound">
 
                                     <ItemTemplate>
                                         <ul class="list-unstyled">
@@ -394,11 +447,44 @@
 
 
                                 </asp:Repeater>
+                      </ul>
+                    </div>
+
+                    <div class="marquee-content marquee-clone"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="clearfix"></div>
+        <div class="main">
+            <div class="container">
+                <!-- BEGIN SERVICE BOX -->
+                <div class="row service-box margin-bottom-40">
+                    <div class="col-md-8">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- TESTIMONIALS -->
+                    <div class="col-md-4 testimonials-v1">
+                        <div class="service-box-heading">
+                            <span>News Updates</span>
+                        </div>
+                        <div class="microsoft containerr">
+                            <div class="marquee">
+                               
                             </div>
                         </div>
 
                     </div>
                     <!-- END TESTIMONIALS -->
+                    <div class="col-md-12">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
                 </div>
 
             </div>
@@ -442,8 +528,7 @@
                         </ul>
                     </div>
                     <!-- END BOTTOM ABOUT BLOCK -->
-                    <div class="col-md-4 col-sm-6
-    pre-footer-col">
+                    <div class="col-md-4 col-sm-6 pre-footer-col">
                         <h2>Useful Links</h2>
                         <ul class="list-unstyled">
 
@@ -461,11 +546,12 @@
                                 <br />
                             </li>
                             <li><a href="http://www.pgportal.gov.in/" target="_blank"><strong>PUBLIC GRIEVANCE</strong> - Register Now </a></li>
+                            <li><a href="rti.aspx"><strong>RTI</strong></a></li>
+                            <li><a href="igtrteam.aspx"><strong>Team IGTR</strong></a></li>
                         </ul>
                     </div>
                     <!-- BEGIN BOTTOM CONTACTS -->
-                    <div class="col-md-4 col-sm-6
-    pre-footer-col">
+                    <div class="col-md-4 col-sm-6 pre-footer-col">
                         <h2>Address</h2>
                         <address class="margin-bottom-40">
                             <h4>INDO GERMAN TOOL ROOM AHMEDABAD</h4>
@@ -491,8 +577,7 @@
                     <!-- BEGIN
     PAYMENTS -->
                     <div class="col-md-3 col-sm-4">
-                        <ul class="social-footer list-unstyled
-    list-inline pull-right">
+                        <ul class="social-footer list-unstyled list-inline pull-right">
                             <li><a href="https://www.facebook.com/igtr.ahmedabad" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/igtr-ahmedabad-303a79169/"><i class="fa fa-linkedin"></i></a></li>	
                             <li><a href="https://twitter.com/igtrahmedabad"><i class="fa fa-twitter"></i></a></li>	

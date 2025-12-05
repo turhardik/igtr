@@ -377,7 +377,23 @@
         &nbsp;
     </div>
 
-    <div class="col-md-12 margin-bottom-40 our-clients">
+    
+    <!-- END CLIENTS -->
+    <%--<img src="images/ghar-ghar-tiranga1.jpeg" class="img-responsive" alt="yoga" style="margin-bottom: 30px;" />
+    <img src="images/ghar-ghar-tiranga.jpeg" class="img-responsive" alt="yoga" style="margin-bottom: 30px;" />--%>
+    <%--<img src="images/yoda-day-2023.jpg" class="img-responsive" alt="yoga" style="margin-bottom: 30px;" />--%>
+    <script>
+        $(function () {
+            scrollMove('.items', 25, 2);
+            
+        })
+    </script>
+  	<!--<iframe width="100%" height="315" src="https://www.youtube.com/embed/jXkrrTA3Vck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->	
+	<%--<a href="https://forms.gle/8xqN2JJhJC5DLVZM7" target="_blank"><img src="images/CCMO.jpg" class="img-responsive" style="border: 1px solid #ddd;" alt="Admission-notice-jan-23.jpeg" /></a>--%>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder5" runat="server">
+  <div class="col-md-12 margin-bottom-40 our-clients">
         <hr />
         <h2><span>Our Clients</span> </h2>
         <div class="col-md-12">
@@ -462,16 +478,4 @@
             </ul>
         </div>
     </div>
-    <!-- END CLIENTS -->
-    <%--<img src="images/ghar-ghar-tiranga1.jpeg" class="img-responsive" alt="yoga" style="margin-bottom: 30px;" />
-    <img src="images/ghar-ghar-tiranga.jpeg" class="img-responsive" alt="yoga" style="margin-bottom: 30px;" />--%>
-    <%--<img src="images/yoda-day-2023.jpg" class="img-responsive" alt="yoga" style="margin-bottom: 30px;" />--%>
-    <script>
-        $(function () {
-            scrollMove('.items', 25, 2);
-            
-        })
-    </script>
-  	<!--<iframe width="100%" height="315" src="https://www.youtube.com/embed/jXkrrTA3Vck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->	
-	<%--<a href="https://forms.gle/8xqN2JJhJC5DLVZM7" target="_blank"><img src="images/CCMO.jpg" class="img-responsive" style="border: 1px solid #ddd;" alt="Admission-notice-jan-23.jpeg" /></a>--%>
 </asp:Content>

@@ -645,6 +645,7 @@
     <Content Include="history.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="igtr-sub-center.aspx" />
+    <Content Include="igtrteam.aspx" />
     <Content Include="images\01-CADCAM.png" />
     <Content Include="images\02-Job-Work%28Machining%29.png" />
     <Content Include="images\03-Tool-Design.png" />
@@ -1112,6 +1113,7 @@
     <Content Include="download\Secretaries_of_all_Ministries_of_GOI.pdf" />
     <Content Include="download\Training Calendar IGTR Ahmedabad.pdf" />
     <Content Include="RACHA-course.aspx" />
+    <Content Include="rti.aspx" />
     <Content Include="SanandApplyNow.aspx" />
     <Content Include="SanandCourse.aspx" />
     <Content Include="SanandPhotoGallery.aspx" />
@@ -1601,6 +1603,13 @@
     <Compile Include="igtr.Master.designer.cs">
       <DependentUpon>igtr.Master</DependentUpon>
     </Compile>
+    <Compile Include="igtrteam.aspx.cs">
+      <DependentUpon>igtrteam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="igtrteam.aspx.designer.cs">
+      <DependentUpon>igtrteam.aspx</DependentUpon>
+    </Compile>
     <Compile Include="infrastructure.aspx.cs">
       <DependentUpon>infrastructure.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1727,6 +1736,13 @@
     </Compile>
     <Compile Include="rfd.aspx.designer.cs">
       <DependentUpon>rfd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rti.aspx.cs">
+      <DependentUpon>rti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rti.aspx.designer.cs">
+      <DependentUpon>rti.aspx</DependentUpon>
     </Compile>
     <Compile Include="SanandApplyNow.aspx.cs">
       <DependentUpon>SanandApplyNow.aspx</DependentUpon>
