@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Net.Mail;
+using System.Drawing;
 
 namespace NakshatraCeramics.DAL
 {
@@ -102,9 +103,9 @@ namespace NakshatraCeramics.DAL
             }
         }
 
-     
 
-    
+
+
 
         // Delete Starts
         internal static void deleteCategory(int ID)
@@ -245,7 +246,7 @@ namespace NakshatraCeramics.DAL
 
         // Get Details By ID starts
 
-        
+
 
 
         internal static DataTable ListGallery()
@@ -469,7 +470,7 @@ namespace NakshatraCeramics.DAL
         }
 
 
-           internal static DataTable GetCategoryBySrch(string srch)
+        internal static DataTable GetCategoryBySrch(string srch)
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
@@ -547,7 +548,7 @@ namespace NakshatraCeramics.DAL
             return dt;
         }
 
-        
+
         internal static DataTable GetSizeBySrch(string srch)
         {
             DataSet ds = new DataSet();
@@ -731,7 +732,7 @@ namespace NakshatraCeramics.DAL
 
 
 
-        
+
 
 
 
@@ -739,7 +740,7 @@ namespace NakshatraCeramics.DAL
 
 
         // Insert starts
-        internal static void InsertCategory(int CategoryID,string CategortyName)
+        internal static void InsertCategory(int CategoryID, string CategortyName)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -760,7 +761,7 @@ namespace NakshatraCeramics.DAL
             }
         }
 
-        internal static void InsertCollection(int CollectionID,string CollectionName)
+        internal static void InsertCollection(int CollectionID, string CollectionName)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -781,7 +782,7 @@ namespace NakshatraCeramics.DAL
             }
         }
 
-        internal static void InsertDesign(int DesignID,string DesignName)
+        internal static void InsertDesign(int DesignID, string DesignName)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -802,7 +803,7 @@ namespace NakshatraCeramics.DAL
             }
         }
 
-        internal static void InsertSize(int SizeID,string SizeName)
+        internal static void InsertSize(int SizeID, string SizeName)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -823,7 +824,7 @@ namespace NakshatraCeramics.DAL
             }
         }
 
-        internal static void UpdatePassword(string Password,int UserID)
+        internal static void UpdatePassword(string Password, int UserID)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -844,7 +845,7 @@ namespace NakshatraCeramics.DAL
             }
         }
 
-        internal static void InsertSurface(int SurfaceID,string SurfaceName)
+        internal static void InsertSurface(int SurfaceID, string SurfaceName)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -930,7 +931,7 @@ namespace NakshatraCeramics.DAL
             //    }
             //}
 
-           
+
             try
             {
                 conn.Open();
@@ -943,16 +944,16 @@ namespace NakshatraCeramics.DAL
                 comm.Dispose();
             }
 
-           
+
         }
 
-        internal static void InsertImageData(int ProductID, string FileName,int ImageType)
+        internal static void InsertImageData(int ProductID, string FileName, int ImageType)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
             SqlCommand comm = new SqlCommand("InsertImage", conn);
             comm.CommandType = CommandType.StoredProcedure;
-            
+
             comm.Parameters.AddWithValue("@p_ImageName", FileName);
             comm.Parameters.AddWithValue("@p_ProductID", ProductID);
             comm.Parameters.AddWithValue("@p_TypeID", ImageType);
@@ -1086,7 +1087,7 @@ namespace NakshatraCeramics.DAL
 
 
 
-        internal static int InsertGalleryMaster(int GalleryID,string GalName, string MainImage)
+        internal static int InsertGalleryMaster(int GalleryID, string GalName, string MainImage)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -1264,11 +1265,11 @@ namespace NakshatraCeramics.DAL
                 conn.Close();
                 adpt.Dispose();
             }
-           
+
             return ds;
         }
 
-        internal static int InsertProductionInq(int ProductionID,string Organization, string Designation, string Name, string Address, string PhoneNo, string FaxNo, string Email, string AOI, string Message, string Reference)
+        internal static int InsertProductionInq(int ProductionID, string Organization, string Designation, string Name, string Address, string PhoneNo, string FaxNo, string Email, string AOI, string Message, string Reference)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -1454,7 +1455,7 @@ namespace NakshatraCeramics.DAL
             return dt;
         }
 
-        internal static int InsertVandor(int VandorID, string VendorName, string Address, string Phone, string Email, string Branches, string ECCNo, string CentralTaxNo,string CTDate, string JobType, string Country, string City, string Fax, string Website, string SalesTaxNo, string SalesTaxDate, string PersonName, string Mobile,string Designation, string CntEmail, string FileName)
+        internal static int InsertVandor(int VandorID, string VendorName, string Address, string Phone, string Email, string Branches, string ECCNo, string CentralTaxNo, string CTDate, string JobType, string Country, string City, string Fax, string Website, string SalesTaxNo, string SalesTaxDate, string PersonName, string Mobile, string Designation, string CntEmail, string FileName)
         {
             SqlConnection conn = DBConnection.GetConnection();
 
@@ -1580,5 +1581,371 @@ namespace NakshatraCeramics.DAL
             }
             return dt;
         }
+
+        /// <summary>
+        /// Selects the placement details.
+        /// </summary>
+        /// <returns>A DataTable.</returns>
+        internal static DataTable SelectPlacementDetails()
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt = null;
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlDataAdapter adpt = new SqlDataAdapter("usp_GetPlacementDetails", conn);
+            adpt.SelectCommand.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conn.Open();
+                adpt.Fill(ds);
+            }
+            finally
+            {
+                conn.Close();
+                adpt.Dispose();
+            }
+            if (ds.Tables.Count > 0)
+            {
+                dt = ds.Tables[0];
+            }
+            return dt;
+        }
+
+        /// <summary>
+        /// Deletes the placement.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        internal static void DeletePlacement(int id)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("SP_DeletePlacementDetails", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ID", id);
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        /// <summary>
+        /// Inserts the placement details.
+        /// </summary>
+        /// <param name="ID">The i d.</param>
+        /// <param name="Name">The name.</param>
+        /// <param name="ContactNo">The contact no.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="IsActive">If true, is active.</param>
+        /// <returns>An int.</returns>
+        internal static int InsertPlacementDetails(int ID, string Name, string ContactNo, string Email, bool IsActive)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+
+            SqlCommand comm = new SqlCommand("SP_InsertPlacementDetails", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            comm.Parameters.AddWithValue("@p_Name", Name);
+            comm.Parameters.AddWithValue("@p_ContactNo", ContactNo);
+            comm.Parameters.AddWithValue("@p_Email", Email);
+            comm.Parameters.AddWithValue("@p_IsActive", IsActive);
+
+            // Output parameter same as your example
+            SqlParameter pID = new SqlParameter();
+            pID.ParameterName = "@p_ID";
+            pID.Value = ID;
+            pID.Direction = ParameterDirection.InputOutput;
+            pID.SqlDbType = SqlDbType.Int;
+
+            comm.Parameters.Add(pID);
+
+            try
+            {
+                conn.Open();
+                comm.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+                comm.Dispose();
+            }
+
+            return ID;
+        }
+
+        /// <summary>
+        /// Selects the placement by i d.
+        /// </summary>
+        /// <param name="ID">The i d.</param>
+        /// <returns>A DataTable.</returns>
+        internal static DataTable SelectPlacementByID(int ID)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+
+            SqlCommand comm = new SqlCommand("SP_SelectPlacementByID", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            comm.Parameters.AddWithValue("@p_ID", ID);
+
+            SqlDataAdapter da = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                da.Fill(dt);
+            }
+            finally
+            {
+                comm.Dispose();
+                conn.Close();
+            }
+
+            return dt;
+        }
+        /// <summary>
+        /// Updates the placement details.
+        /// </summary>
+        /// <param name="ID">The i d.</param>
+        /// <param name="Name">The name.</param>
+        /// <param name="ContactNo">The contact no.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="IsActive">If true, is active.</param>
+        /// <returns>An int.</returns>
+        internal static int UpdatePlacementDetails(int ID, string Name, string ContactNo, string Email, bool IsActive)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+
+            SqlCommand comm = new SqlCommand("SP_UpdatePlacementDetails", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            comm.Parameters.AddWithValue("@p_Name", Name);
+            comm.Parameters.AddWithValue("@p_ContactNo", ContactNo);
+            comm.Parameters.AddWithValue("@p_Email", Email);
+            comm.Parameters.AddWithValue("@p_IsActive", IsActive);
+
+            SqlParameter pID = new SqlParameter();
+            pID.ParameterName = "@p_ID";
+            pID.Value = ID;
+            pID.Direction = ParameterDirection.InputOutput;
+            pID.SqlDbType = SqlDbType.Int;
+
+            comm.Parameters.Add(pID);
+
+            try
+            {
+                conn.Open();
+                comm.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+                comm.Dispose();
+            }
+
+            return Convert.ToInt32(pID.Value);
+        }
+        /// <summary>
+        /// Inserts the update recruiter.
+        /// </summary>
+        /// <param name="ID">The i d.</param>
+        /// <param name="RecruiterName">The recruiter name.</param>
+        /// <param name="IsActive">If true, is active.</param>
+        /// <returns>An int.</returns>
+        internal static int InsertUpdateRecruiter(int ID, string RecruiterName, bool IsActive)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand comm = new SqlCommand("SP_InsertUpdateRecruiter", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            comm.Parameters.AddWithValue("@p_RecruiterName", RecruiterName);
+            comm.Parameters.AddWithValue("@p_IsActive", IsActive);
+
+            SqlParameter pID = new SqlParameter("@p_ID", SqlDbType.Int);
+            pID.Direction = ParameterDirection.InputOutput;
+            pID.Value = ID;
+            comm.Parameters.Add(pID);
+
+            try
+            {
+                conn.Open();
+                comm.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return Convert.ToInt32(pID.Value);
+        }
+
+        /// <summary>
+        /// Gets the recruiters.
+        /// </summary>
+        /// <returns>A DataTable.</returns>
+        internal static DataTable GetRecruiters()
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand comm = new SqlCommand("SP_GetRecruiters", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter da = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        /// <summary>
+        /// Gets the recruiter by i d.
+        /// </summary>
+        /// <param name="ID">The i d.</param>
+        /// <returns>A DataTable.</returns>
+        internal static DataTable GetRecruiterByID(int ID)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand comm = new SqlCommand("SP_GetRecruiterByID", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            comm.Parameters.AddWithValue("@p_ID", ID);
+
+            SqlDataAdapter da = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        /// <summary>
+        /// Deletes the recruiter.
+        /// </summary>
+        /// <param name="ID">The i d.</param>
+        internal static void DeleteRecruiter(int ID)
+        {
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand comm = new SqlCommand("SP_DeleteRecruiter", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+            comm.Parameters.AddWithValue("@p_ID", ID);
+
+            conn.Open();
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        internal static void DeleteRTI(int ID)
+        {
+            using (SqlConnection conn = DBConnection.GetConnection())
+            {
+                SqlCommand comm = new SqlCommand("SP_DeleteRTI", conn);
+                comm.CommandType = CommandType.StoredProcedure;
+                comm.Parameters.AddWithValue("@p_ID", ID);
+
+                conn.Open();
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        internal static DataTable SelectRTI()
+        {
+            using (SqlConnection conn = DBConnection.GetConnection())
+            {
+                SqlCommand comm = new SqlCommand("SP_GetRTI", conn);
+                comm.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        internal static DataTable SelectRTIByID(int ID)
+        {
+            using (SqlConnection conn = DBConnection.GetConnection())
+            {
+                SqlCommand comm = new SqlCommand("SP_GetRTIByID", conn);
+                comm.CommandType = CommandType.StoredProcedure;
+
+                comm.Parameters.AddWithValue("@p_ID", ID);
+
+                SqlDataAdapter da = new SqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        internal static int InsertUpdateRTI(int ID, string title, string fileName, string link, bool isActive)
+        {
+            using (SqlConnection conn = DBConnection.GetConnection())
+            {
+                SqlCommand comm = new SqlCommand("SP_InsertUpdateRTI", conn);
+                comm.CommandType = CommandType.StoredProcedure;
+
+                comm.Parameters.AddWithValue("@p_Title", title);
+                comm.Parameters.AddWithValue("@p_FileName", fileName);
+                comm.Parameters.AddWithValue("@p_Link", link);
+                comm.Parameters.AddWithValue("@p_IsActive", isActive);
+
+                SqlParameter pID = new SqlParameter("@p_ID", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.InputOutput,
+                    Value = ID
+                };
+                comm.Parameters.Add(pID);
+
+                conn.Open();
+                comm.ExecuteNonQuery();
+                conn.Close();
+
+                return Convert.ToInt32(pID.Value);
+            }
+        }
+
+        internal static DataTable SelectActiveRTI()
+        {
+           
+
+            SqlConnection conn = DBConnection.GetConnection();
+
+            SqlCommand comm = new SqlCommand("nkigtr.SelectRTI", conn);
+            comm.CommandType = CommandType.StoredProcedure;
+
+           
+
+            SqlDataAdapter da = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                da.Fill(dt);
+            }
+            finally
+            {
+                comm.Dispose();
+                conn.Close();
+            }
+
+            return dt;
+        }
+
+
+        //internal static void DeleteRTI(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal static object SelectRTI()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal static DataTable SelectRTIByID(int iD)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal static void InsertUpdateRTI(int iD, string title, string fileName, string link, bool isActive)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
+
 }

@@ -9,10 +9,65 @@
     .mb20{margin-bottom: 20px;}
     .mb30{margin-bottom: 30px;}
   </style>
+    <style>
+    a:hover{color:#F65314;}
+    a.btn:hover{ background-color: #F65314; }
+    .text-right{text-align: right;}
+    .mb20{margin-bottom: 20px;}
+    .mb30{margin-bottom: 30px;}
+  </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <!-- ================= Placement Officer ================ -->
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>Placement Details</td>
+        <td>Details</td>
+    </tr>
+
+    <tr>
+        <td>Placement Officer</td>
+        <td>
+            <asp:Repeater ID="rptPlacement" runat="server">
+                <ItemTemplate>
+                    <strong>Name:</strong> <%# Eval("Name") %><br />
+                    <strong>Contact No.:</strong> <%# Eval("ContactNo") %><br />
+                    <strong>Email ID:</strong> <%# Eval("Email") %>
+                </ItemTemplate>
+            </asp:Repeater>
+        </td>
+    </tr>
+</table>
+
+<!-- ================= Company Registration Button ================ -->
+<div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-4 text-right mb20">
+    <a href="CompanyRegistration.aspx" class="btn btn-primary btn-sm">Company Registration</a>
+  </div>
+
+  <div class="col-md-12">
+    <h3 class="mb30 text-center" style="color:brown">Our Valuable Recruiters</h3>
+  </div>
+
+ <asp:Repeater ID="rptRecruiters" runat="server">
+    <ItemTemplate>
+        <div class="row">
+            <div class="col-md-6">
+                <ul><li><%# Eval("LeftCompany") %></li></ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul><li><%# Eval("RightCompany") %></li></ul>
+            </div>
+        </div>
+    </ItemTemplate>
+</asp:Repeater>
+
+</div>
     
-<table class="table table-bordered table-striped">	
+<%--<table class="table table-bordered table-striped">	
     <tr>	
       <td>Placement Details</td>	
       <td>Details</td>
@@ -50,6 +105,6 @@
   </div>
 </div>
   
-  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>--%>
                 
 </asp:Content>

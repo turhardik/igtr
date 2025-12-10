@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace igtrahd
+namespace igtrahd.AdminPanel
 {
 
 
-    public partial class rti
+    public partial class ListPlacementDetails
     {
 
         /// <summary>
-        /// rptRTI control.
+        /// rptPlacement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptRTI;
+        protected global::System.Web.UI.WebControls.Repeater rptPlacement;
     }
 }

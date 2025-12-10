@@ -64,6 +64,8 @@
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPanel\addnews.aspx" />
+    <Content Include="AdminPanel\AddPlacement.aspx" />
+    <Content Include="AdminPanel\AddRecruiter.aspx" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap.css" />
@@ -78,6 +80,9 @@
     <Content Include="AdminPanel\css\stats.css" />
     <Content Include="AdminPanel\css\styles.css" />
     <Content Include="AdminPanel\Dashboard.aspx" />
+    <Content Include="AdminPanel\EditPlacement.aspx" />
+    <Content Include="AdminPanel\EditRecruiter.aspx" />
+    <Content Include="AdminPanel\EditRTI.aspx" />
     <Content Include="AdminPanel\images\facebook.png" />
     <Content Include="AdminPanel\js\calendar.js" />
     <Content Include="AdminPanel\js\custom.js" />
@@ -88,12 +93,15 @@
     <Content Include="AdminPanel\ListAlumini.aspx" />
     <Content Include="AdminPanel\ListGallery.aspx" />
     <Content Include="AdminPanel\ListNewsEvents.aspx" />
+    <Content Include="AdminPanel\ListPlacementDetails.aspx" />
     <Content Include="AdminPanel\ListProductionInq.aspx" />
     <Content Include="AdminPanel\ListTrainingInq.aspx" />
     <Content Include="AdminPanel\ListVendor.aspx" />
     <Content Include="AdminPanel\managegallery.aspx" />
     <Content Include="AdminPanel\ManageNewsEvents.aspx" />
+    <Content Include="AdminPanel\RecruiterList.aspx" />
     <Content Include="AdminPanel\ResetPassword.aspx" />
+    <Content Include="AdminPanel\RTIList.aspx" />
     <Content Include="AdminPanel\scripts\jquery-1.11.3.min.js" />
     <Content Include="AdminPanel\scripts\jquery-ui.js" />
     <Content Include="AdminPanel\scripts\jquery-ui.min.js" />
@@ -1371,6 +1379,20 @@
     <Compile Include="AdminPanel\addnews.aspx.designer.cs">
       <DependentUpon>addnews.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\AddPlacement.aspx.cs">
+      <DependentUpon>AddPlacement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddPlacement.aspx.designer.cs">
+      <DependentUpon>AddPlacement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddRecruiter.aspx.cs">
+      <DependentUpon>AddRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddRecruiter.aspx.designer.cs">
+      <DependentUpon>AddRecruiter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1384,6 +1406,27 @@
     </Compile>
     <Compile Include="AdminPanel\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditPlacement.aspx.cs">
+      <DependentUpon>EditPlacement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditPlacement.aspx.designer.cs">
+      <DependentUpon>EditPlacement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditRecruiter.aspx.cs">
+      <DependentUpon>EditRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditRecruiter.aspx.designer.cs">
+      <DependentUpon>EditRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditRTI.aspx.cs">
+      <DependentUpon>EditRTI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditRTI.aspx.designer.cs">
+      <DependentUpon>EditRTI.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\ListAlumini.aspx.cs">
       <DependentUpon>ListAlumini.aspx</DependentUpon>
@@ -1405,6 +1448,13 @@
     </Compile>
     <Compile Include="AdminPanel\ListNewsEvents.aspx.designer.cs">
       <DependentUpon>ListNewsEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListPlacementDetails.aspx.cs">
+      <DependentUpon>ListPlacementDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListPlacementDetails.aspx.designer.cs">
+      <DependentUpon>ListPlacementDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\ListProductionInq.aspx.cs">
       <DependentUpon>ListProductionInq.aspx</DependentUpon>
@@ -1441,12 +1491,26 @@
     <Compile Include="AdminPanel\ManageNewsEvents.aspx.designer.cs">
       <DependentUpon>ManageNewsEvents.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\RecruiterList.aspx.cs">
+      <DependentUpon>RecruiterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\RecruiterList.aspx.designer.cs">
+      <DependentUpon>RecruiterList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPanel\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\RTIList.aspx.cs">
+      <DependentUpon>RTIList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\RTIList.aspx.designer.cs">
+      <DependentUpon>RTIList.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\UpdateGallery.aspx.cs">
       <DependentUpon>UpdateGallery.aspx</DependentUpon>
@@ -1520,6 +1584,7 @@
     </Compile>
     <Compile Include="DAL\DBCommunication.cs" />
     <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\PlacementDetails.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

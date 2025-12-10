@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace igtrahd
+namespace igtrahd.AdminPanel
 {
 
 
-    public partial class rti
+    public partial class RTIList
     {
 
         /// <summary>
