@@ -83,6 +83,7 @@
     <Content Include="AdminPanel\EditPlacement.aspx" />
     <Content Include="AdminPanel\EditRecruiter.aspx" />
     <Content Include="AdminPanel\EditRTI.aspx" />
+    <Content Include="AdminPanel\EditTeamIGTR.aspx" />
     <Content Include="AdminPanel\images\facebook.png" />
     <Content Include="AdminPanel\js\calendar.js" />
     <Content Include="AdminPanel\js\custom.js" />
@@ -95,6 +96,7 @@
     <Content Include="AdminPanel\ListNewsEvents.aspx" />
     <Content Include="AdminPanel\ListPlacementDetails.aspx" />
     <Content Include="AdminPanel\ListProductionInq.aspx" />
+    <Content Include="AdminPanel\ListTeam.aspx" />
     <Content Include="AdminPanel\ListTrainingInq.aspx" />
     <Content Include="AdminPanel\ListVendor.aspx" />
     <Content Include="AdminPanel\managegallery.aspx" />
@@ -1428,6 +1430,13 @@
     <Compile Include="AdminPanel\EditRTI.aspx.designer.cs">
       <DependentUpon>EditRTI.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\EditTeamIGTR.aspx.cs">
+      <DependentUpon>EditTeamIGTR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditTeamIGTR.aspx.designer.cs">
+      <DependentUpon>EditTeamIGTR.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\ListAlumini.aspx.cs">
       <DependentUpon>ListAlumini.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1462,6 +1471,13 @@
     </Compile>
     <Compile Include="AdminPanel\ListProductionInq.aspx.designer.cs">
       <DependentUpon>ListProductionInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ListTeam.aspx.cs">
+      <DependentUpon>ListTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ListTeam.aspx.designer.cs">
+      <DependentUpon>ListTeam.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\ListTrainingInq.aspx.cs">
       <DependentUpon>ListTrainingInq.aspx</DependentUpon>

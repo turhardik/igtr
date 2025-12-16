@@ -6,18 +6,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace igtrahd
+namespace igtrahd.AdminPanel
 {
-    public partial class igtrteam : System.Web.UI.Page
+    public partial class ListTeam : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                rptTeam.DataSource = DBCommunication.SelectActiveTeamIGTR();
-                rptTeam.DataBind();
+                rptAdminTeam.DataSource = DBCommunication.SelectActiveTeamIGTR();
+                rptAdminTeam.DataBind();
             }
         }
-
     }
 }

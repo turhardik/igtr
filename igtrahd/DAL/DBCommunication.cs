@@ -1926,6 +1926,63 @@ namespace NakshatraCeramics.DAL
             return dt;
         }
 
+        public static DataTable SelectActiveTeamIGTR()
+        {
+            SqlConnection con = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("SelectActiveTeamIGTR", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable SelectTeamIGTRByID(int id)
+        {
+            SqlConnection con = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("SelectTeamIGTRByID", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ID", id);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static void InsertUpdateTeamIGTR(int id, string name, string designation,
+            string address, string phone, string email, string photo, bool isActive)
+        {
+            SqlConnection con = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("InsertUpdateTeamIGTR", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@Designation", designation);
+            cmd.Parameters.AddWithValue("@Address", address);
+            cmd.Parameters.AddWithValue("@Phone", phone);
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@PhotoPath", photo);
+            cmd.Parameters.AddWithValue("@IsActive", isActive);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public static void DeleteTeamIGTR(int id)
+        {
+            SqlConnection con = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("DeleteTeamIGTR", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ID", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         //internal static void DeleteRTI(int id)
         //{
