@@ -54,7 +54,7 @@ namespace igtrahd.AdminPanel
 
             if (result > 0)
             {
-                Response.Redirect("PlacementList.aspx");
+                Response.Redirect("ListPlacementDetails.aspx");
             }
             else
             {

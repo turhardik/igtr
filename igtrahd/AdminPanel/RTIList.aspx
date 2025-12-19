@@ -3,10 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <table class="table table-bordered">
     <asp:Repeater ID="rptRTI" runat="server">
         <headertemplate>
-            <table class="table table-bordered">
+            
                 <tr style="background: #2c3e9e; color: #fff; font-weight: bold;">
                     <th>Title</th>
                     <th>Details</th>
@@ -36,9 +36,9 @@
             </tr>
         </itemtemplate>
 
-        </table>
+        
     </asp:Repeater>
-
+        </table>
     <br />
     <a href="EditRTI.aspx" class="btn btn-success">Add New</a>
 

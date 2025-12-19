@@ -1846,7 +1846,7 @@ namespace NakshatraCeramics.DAL
         {
             using (SqlConnection conn = DBConnection.GetConnection())
             {
-                SqlCommand comm = new SqlCommand("SP_GetRTI", conn);
+                SqlCommand comm = new SqlCommand("SelectRTI", conn);
                 comm.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter da = new SqlDataAdapter(comm);
